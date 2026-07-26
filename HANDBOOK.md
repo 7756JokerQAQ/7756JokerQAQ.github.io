@@ -1,15 +1,13 @@
 # Joker 沉寂 站点 · 完整项目手册
 
-> ⚠ **本站已从「LUNATIC-E 百成 / Krian」更名为「Joker 沉寂」**。
-> 外部服务（Giscus 评论 / Google Analytics / Algolia 搜索 / SEO 收录验证）目前**已禁用**，见源码内 `TODO[评论/统计/搜索/SEO]` 注释；申请到自己的配置后填入对应位置即可启用。
-> 注：手册正文部分示例值可能尚未完全同步，请以实际源码为准。
->
 > 本手册面向**项目维护者与二次开发者**，系统说明本仓库的架构、配置、自定义组件、内容写作方式以及构建部署流程。
 >
 > - **站点名称**：Joker 沉寂
-> - **线上地址**：`https://your-domain.com`（TODO：待填）
+> - **线上地址**：`https://blog.aiseek.site`
 > - **框架**：Docusaurus 3.8.1 + React 19 + TypeScript
-> - **手册版本**：v1.1 ｜ 最后更新：2026-07-26
+> - **手册版本**：v1.2 ｜ 最后更新：2026-07-27
+>
+> ℹ 注：项目迭代较快，手册正文部分示例值可能尚未完全同步，请以实际源码为准。
 
 ---
 
@@ -55,11 +53,11 @@
 
 | 项 | 值 |
 |----|----|
-| `title` | LUNATIC-E 百成 |
+| `title` | Joker 沉寂 |
 | `tagline` | 「没必要的事不做，必要的事尽快做」 |
-| `url` | `https://lunatice.com` |
+| `url` | `https://blog.aiseek.site` |
 | `baseUrl` | `/` |
-| GitHub 部署 | `organizationName: krian` / `projectName: krian` |
+| GitHub 部署 | `organizationName: 7756JokerQAQ` / `projectName: 7756JokerQAQ.github.io` |
 | `onBrokenLinks` | `throw`（链接断裂直接报错，要求严格） |
 
 ---
@@ -108,7 +106,7 @@ learn.github.io/
 ├── HANDBOOK.md            # 本手册
 │
 ├── blog/                  # 博客内容目录
-│   ├── authors.yml        #   作者定义（当前：Krian = 百成）
+│   ├── authors.yml        #   作者定义（当前：Joker = 沉寂）
 │   └── tags.yml           #   标签定义（当前：computer → 个人博客）
 │   （尚无文章 *.md/*.mdx）
 │
@@ -178,10 +176,10 @@ learn.github.io/
 
 - **navbar**：左侧为文档分区入口（计算机基础 / AI Agent / 数据结构与算法 / DevOps），右侧为「项目」下拉（指向两个学习导航仓库）和「关于我」。
 - **tableOfContents**：展示 `h2 ~ h5` 级别的目录。
-- **algolia**：`appId: 25YYWI12TQ`，`indexName: 'Krian Web Site'`，`contextualSearch: true`。
+- **algolia**：`appId: 25YYWI12TQ`，`indexName: 'Joker Web Site'`，`contextualSearch: true`。
 - **metadata**（SEO）：`keywords`、`algolia-site-verification`、`baidu-site-verification`（同时做 Google / 百度收录验证）。
 - **prism**：亮色 `github` / 暗色 `dracula` 代码主题。
-- **footer**：`Copyright © 2021 - <今年> Lunatic-e 百成 Krian.`
+- **footer**：`Copyright © 2021 - <今年> Joker 沉寂.`
 
 ### 4.3 Mermaid 与数学
 
@@ -234,7 +232,7 @@ PDF 阅读页用法：
 
 首页由 `src/components/HomePage/Layout/index.tsx` 组装，左右两栏：
 
-- **左侧**：个人标题（"Hi，这里是 百成 👋"，带逐级延迟的入场动画）→ 简介 → `<SkillsInfo/>` 技能图标条 → "关于我"按钮。
+- **左侧**：个人标题（"Hi，这里是 沉寂 👋"，带逐级延迟的入场动画）→ 简介 → `<SkillsInfo/>` 技能图标条 → "关于我"按钮。
 - **右侧**：`/img/homepage/homepage.gif` 动画图。
 
 辅助子组件：
@@ -286,7 +284,7 @@ PDF 阅读页用法：
 
 **位置**：`src/components/Comment/Comment.tsx`
 
-- 基于 `@giscus/react`，仓库 `LunaticKrian/LunaticKrian.github.io` 的 `General` 分类。
+- 基于 `@giscus/react`，仓库 `7756JokerQAQ/7756JokerQAQ.github.io` 的 `General` 分类。
 - `mapping: 'specific'` + `strict: '1'`：用根据路径生成的 term 精确匹配 GitHub Discussion，避免父子路径评论串台。
 - 根据当前颜色模式切换 `light` / `transparent_dark` 主题。
 - 该组件被 `DocItem/Layout` 覆写调用（文档页底部评论）。
@@ -324,7 +322,7 @@ PDF 阅读页用法：
 title: 文章标题
 description: 摘要描述
 tags: [computer]            # 引用 tags.yml 中定义的标签
-authors: [Krian]            # 引用 authors.yml 中定义的作者
+authors: [Joker]            # 引用 authors.yml 中定义的作者
 date: 2026-07-26            # 文件名已含日期时可不写
 draft: false                # true 则不发布
 # —— 可选：开启君子锁 ——
@@ -336,7 +334,7 @@ lock_preview: 380           # 可见预览高度 px
 `<PdfViewer file="/pdfs/xxx.pdf" />` 等组件。
 ```
 
-- **作者**：在 `blog/authors.yml` 维护。当前 `Krian` → name "百成"。
+- **作者**：在 `blog/authors.yml` 维护。当前 `Joker` → name "沉寂"。
 - **标签**：在 `blog/tags.yml` 维护。当前 `computer` → label "个人博客"。
 - 每页 1 篇（`postsPerPage: 1`），侧边栏展示全部文章。
 
@@ -373,7 +371,7 @@ lock_preview: 380           # 可见预览高度 px
 
 1. 文章 frontmatter 设 `lock: true` → 主题覆写用 `<ContentLock>` 包裹正文。
 2. 正文限高截断，底部出现解锁卡片（含公众号二维码引导）。
-3. 读者访问 `/unlock` 页 → 页面用**公开密钥** `LUNATICKRIANUNLOCK` 实时生成当前 6 位 TOTP 码（每 30s 一变）。
+3. 读者访问 `/unlock` 页 → 页面用**公开密钥** `JOKERBLOGUNLOCK` 实时生成当前 6 位 TOTP 码（每 30s 一变）。
 4. 读者把码填回文章解锁框 → `verifyTOTP()` 校验（±1 个时间窗，共 90s 时钟容错，恒定时间比较）→ 通过则解锁并存 `sessionStorage`。
 
 **TOTP 实现**（`src/lib/totp.ts`）：标准的 RFC 6238——Base32 解码密钥 → HMAC-SHA1（用 Web Crypto）→ 动态截断 → 模 10^6 得 6 位码。
@@ -408,7 +406,7 @@ lock_preview: 380           # 可见预览高度 px
 
 ### 10.2 GitHub Pages 部署
 
-配置中已设置 `organizationName: 'krian'` / `projectName: 'krian'`。可使用：
+配置中已设置 `organizationName: '7756JokerQAQ'` / `projectName: '7756JokerQAQ'`。可使用：
 
 ```bash
 # 使用 Docusaurus 内置部署命令（需配置好 GitHub Pages 与环境变量 GH_TOKEN 等）
@@ -417,7 +415,7 @@ npm run deploy
 
 `static/.nojekyll` 文件确保 GitHub Pages 跳过 Jekyll 处理，保留下划线开头的资源文件。
 
-> 实际仓库地址与 `README.md` 中克隆链接（`LunaticKrian/LunaticKrian.github.io`）需以实际为准，二者命名不一致，部署时请核对。
+> 实际仓库地址与 `README.md` 中克隆链接（`7756JokerQAQ/7756JokerQAQ.github.io`）需以实际为准，二者命名不一致，部署时请核对。
 
 ### 10.3 其他命令
 
