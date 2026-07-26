@@ -296,7 +296,19 @@ const config: Config = {
         // 开启Mermaid图表语法，支持直接在MD中进行展示渲染
         mermaid: true
     },
-    themes: ['@docusaurus/theme-mermaid'],
+    themes: [
+        '@docusaurus/theme-mermaid',
+        [
+            '@easyops-cn/docusaurus-search-local',
+            {
+                hashed: true,
+                language: ['zh', 'en'],
+                indexDocs: true,
+                indexBlog: true,
+                indexPages: false,
+            },
+        ],
+    ],
 };
 
 export default config;
