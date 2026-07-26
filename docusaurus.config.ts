@@ -17,8 +17,8 @@ const config: Config = {
         v4: true, // Improve compatibility with the upcoming Docusaurus v4
     },
 
-    // 生产环境站点地址（GitHub Pages 用户主页站）
-    url: 'https://7756jokerqaq.github.io',
+    // 生产环境站点地址（自定义域名）
+    url: 'https://blog.aiseek.site',
     // Set the /<baseUrl>/ pathname under which your site is served
     // For GitHub pages deployment, it is often '/<projectName>/'
     baseUrl: '/',
