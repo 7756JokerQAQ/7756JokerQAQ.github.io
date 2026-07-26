@@ -252,3 +252,14 @@ article p {
 .theme-doc-sidebar-item-category > .menu__link {
     font-weight: 700;
 }
+
+/* ===== 整体内容居中 + 两侧留白（像 JavaGuide，sidebar 不再贴浏览器边缘）===== */
+.navbar__inner {
+    justify-content: center;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.main-wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+}

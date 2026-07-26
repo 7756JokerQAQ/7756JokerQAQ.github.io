@@ -8,6 +8,7 @@ import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
  */
 const sidebars: SidebarsConfig = {
     blogSidebar: [
+        'intro',
         {
             type: 'category',
             label: '数据结构与算法',
