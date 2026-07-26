@@ -283,6 +283,7 @@ const config: Config = {
         prism: {
             theme: prismThemes.github,
             darkTheme: prismThemes.dracula,
+            additionalLanguages: ['java'],
         },
 
         // Mermaid 图表配置

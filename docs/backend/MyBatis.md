@@ -318,7 +318,7 @@ public static void main(String[] args) {
 
 需要在main下建立一个mapper类，而且在resource文件下建立相应的mapper路径 文件名称层次不用`.`用`\`来表示并且建立完成后将对应的UserMapper.xml放在该路径下即可。编译后IDEA自动将接口和SQL映射文件放在一起.
 
--   设置SQL映射文件的namespace属性为mapper接口的全限定名📂![](https://github.githubassets.com/images/icons/emoji/unicode/1f4c2.png?v8)UserMapper.xml修改代码
+-   设置SQL映射文件的namespace属性为mapper接口的全限定名📂UserMapper.xml修改代码
 
 ```xml
 <mapper namespace="com.itheima.mapper.UserMapper"> 

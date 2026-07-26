@@ -49,7 +49,7 @@ public class TestController {
 
 ![image-20230328204109673](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303282041730.png)
 
-账户为:user 🔑![](https://github.githubassets.com/images/icons/emoji/unicode/1f511.png?v8)为
+账户为:user 🔑为
 
 ![image-20230328204304514](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303282043567.png)
 
@@ -417,7 +417,7 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
 
 ![image-20230403201913367](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202304032019408.png)
 
-说明这个在登录之前走了过滤器😄![](https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8) 但是当前我们还没有输入token，token时刚刚生成的
+说明这个在登录之前走了过滤器😄 但是当前我们还没有输入token，token时刚刚生成的
 
 接着我们进行token的验证登录:因为我们拿到了token这就好办了测试另一个接口这次直接调用hello接口 预测能返回hello security
 
@@ -629,7 +629,7 @@ WHERE
 
 ![image-20230404215557142](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202304042155189.png)
 
-这里面的数据是我提前存入的你也可以手动的添加😏![](https://github.githubassets.com/images/icons/emoji/unicode/1f60f.png?v8)
+这里面的数据是我提前存入的你也可以手动的添加😏
 
 ![image-20230404215825331](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202304042158383.png)
 
@@ -697,7 +697,7 @@ WHERE
 
 ![image-20230404220519246](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202304042205314.png)
 
-直接调用进行查询即可；结果我就不粘贴了😏![](https://github.githubassets.com/images/icons/emoji/unicode/1f60f.png?v8)
+直接调用进行查询即可；结果我就不粘贴了😏
 
 ## 6.自定义失败处理
 

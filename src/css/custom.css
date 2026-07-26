@@ -247,3 +247,8 @@ article p {
         transition: none;
     }
 }
+
+/* ===== 侧边栏：分类标题（二级 category）加粗，与文章标题（三级）区分 ===== */
+.theme-doc-sidebar-item-category > .menu__link {
+    font-weight: 700;
+}

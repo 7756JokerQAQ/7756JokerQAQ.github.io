@@ -39,7 +39,7 @@ title: "单调栈和二叉树"
 
 这道题目非常非常的简单就是一个简单的递归函数就行了，简单的分析以下就是非常的简单看看实例二的那颗树:
 
-😄![](https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8)交换左右两颗子树，这是最小单位了，所以这里我们首先判断左右子树是否全为null（这是递归结束的标志），然后就定义一个节点记录左子树，一个节点记录右子树当然这里需要的是递归到最左和最右,然后将两颗字数进行交换就行了,这还不是那种复杂一点的交换，你会发现最小的单位就是实例二的图，可以看看第[101](https://leetcode.cn/problems/symmetric-tree/?favorite=2cktkvj)题代码如下:
+😄交换左右两颗子树，这是最小单位了，所以这里我们首先判断左右子树是否全为null（这是递归结束的标志），然后就定义一个节点记录左子树，一个节点记录右子树当然这里需要的是递归到最左和最右,然后将两颗字数进行交换就行了,这还不是那种复杂一点的交换，你会发现最小的单位就是实例二的图，可以看看第[101](https://leetcode.cn/problems/symmetric-tree/?favorite=2cktkvj)题代码如下:
 
 ```java
 class Solution {
@@ -107,7 +107,7 @@ class Solution {
 2.  p=root，且q在root的左或右子树中
 3.  q=root，且p在root的左或右子树中
 
-![Picture2.png](https://pic.leetcode-cn.com/1599885247-mgYjRv-Picture2.png)
+![Picture2.png](/img/leetcode/1599885247-mgYjRv-Picture2.png)
 
 考虑通过递归对二叉树进行先序遍历，当遇到节点p或q是返回，从底至定的进行回溯，当节点p,q在节点root的异侧时，节点root即为最近的公共祖先,则向上返回root
 
@@ -127,7 +127,7 @@ class Solution {
         -   p,q两节点都在root的右子树中，此时的right指向最近的公共祖先节点；
     -   当left不为空，right为空：与上个情况同理
 
-![Picture3.png](https://pic.leetcode-cn.com/1599885247-KpxUys-Picture3.png),![Picture4.png](https://pic.leetcode-cn.com/1599885247-azGPkG-Picture4.png),![Picture5.png](https://pic.leetcode-cn.com/1599885247-hIMEfJ-Picture5.png),![Picture6.png](https://pic.leetcode-cn.com/1599885247-UMCTfd-Picture6.png),![Picture7.png](https://pic.leetcode-cn.com/1599885247-SLOIAX-Picture7.png),![Picture8.png](https://pic.leetcode-cn.com/1599885247-JGxmmL-Picture8.png),![Picture9.png](https://pic.leetcode-cn.com/1599885247-lVrUTd-Picture9.png),![Picture10.png](https://pic.leetcode-cn.com/1599885247-VTPazU-Picture10.png),![Picture11.png](https://pic.leetcode-cn.com/1599885247-KePYfU-Picture11.png),![Picture12.png](https://pic.leetcode-cn.com/1599885247-xkRUDm-Picture12.png),![Picture13.png](https://pic.leetcode-cn.com/1599885247-SFdLoP-Picture13.png),![Picture14.png](https://pic.leetcode-cn.com/1599885247-YOUEcd-Picture14.png),![Picture15.png](https://pic.leetcode-cn.com/1599885247-HcncTq-Picture15.png),![Picture16.png](https://pic.leetcode-cn.com/1599885247-oeFNkc-Picture16.png),![Picture17.png](https://pic.leetcode-cn.com/1599885247-DjiiMY-Picture17.png),![Picture18.png](https://pic.leetcode-cn.com/1599885247-SkpSEn-Picture18.png),![Picture19.png](https://pic.leetcode-cn.com/1599885247-jFDBar-Picture19.png),![Picture20.png](https://pic.leetcode-cn.com/1599885247-GEkXRi-Picture20.png)
+![Picture3.png](/img/leetcode/1599885247-KpxUys-Picture3.png),![Picture4.png](/img/leetcode/1599885247-azGPkG-Picture4.png),![Picture5.png](/img/leetcode/1599885247-hIMEfJ-Picture5.png),![Picture6.png](/img/leetcode/1599885247-UMCTfd-Picture6.png),![Picture7.png](/img/leetcode/1599885247-SLOIAX-Picture7.png),![Picture8.png](/img/leetcode/1599885247-JGxmmL-Picture8.png),![Picture9.png](/img/leetcode/1599885247-lVrUTd-Picture9.png),![Picture10.png](/img/leetcode/1599885247-VTPazU-Picture10.png),![Picture11.png](/img/leetcode/1599885247-KePYfU-Picture11.png),![Picture12.png](/img/leetcode/1599885247-xkRUDm-Picture12.png),![Picture13.png](/img/leetcode/1599885247-SFdLoP-Picture13.png),![Picture14.png](/img/leetcode/1599885247-YOUEcd-Picture14.png),![Picture15.png](/img/leetcode/1599885247-HcncTq-Picture15.png),![Picture16.png](/img/leetcode/1599885247-oeFNkc-Picture16.png),![Picture17.png](/img/leetcode/1599885247-DjiiMY-Picture17.png),![Picture18.png](/img/leetcode/1599885247-SkpSEn-Picture18.png),![Picture19.png](/img/leetcode/1599885247-jFDBar-Picture19.png),![Picture20.png](/img/leetcode/1599885247-GEkXRi-Picture20.png)
 
 代码实现逻辑如下所示:
 
@@ -262,7 +262,7 @@ class Solution {
 
 **解题四路:**
 
-该题利用单调栈可以完美的解决😄![](https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8)这个不同于上一道题就是他有两个数组，所以需要一个寻找下标的过程，也就是我们从num1中取一个数据我们不仅要**记录当前数据**还要**记录下标**想想为什么？
+该题利用单调栈可以完美的解决😄这个不同于上一道题就是他有两个数组，所以需要一个寻找下标的过程，也就是我们从num1中取一个数据我们不仅要**记录当前数据**还要**记录下标**想想为什么？
 
 解：当然是为了存放结果，因为我们利用的是单调栈来存放下标，当我们找打数据和其下一个最大元素时需要将这个最大元素存放到结果中，比如那**示例二来说**:
 
@@ -271,7 +271,7 @@ class Solution {
 -   接着在nums2中找到对应的数据，并且找到其右侧第一个比他大的数据为3
 -   然后将数据3存入结果res\[0\]中这就是我们需要的效果
 
-然后问题来了:用什么来存储数据和下标，而且还要能检测到num2是否包含num1的数据😏![](https://github.githubassets.com/images/icons/emoji/unicode/1f60f.png?v8)是不是想到了，没错就是map很好的解决了这个问题，所以又回到了单调栈中而且是找最大的元素所以单调栈从头到尾单调递增也就是当一个元素入栈时考虑以下情况:
+然后问题来了:用什么来存储数据和下标，而且还要能检测到num2是否包含num1的数据😏是不是想到了，没错就是map很好的解决了这个问题，所以又回到了单调栈中而且是找最大的元素所以单调栈从头到尾单调递增也就是当一个元素入栈时考虑以下情况:
 
 -   当期遍历的元素T\[i\]小于栈顶T\[peek()\]元素，入栈该元素的下标i
 -   当前遍历的元素T\[i\]等于栈顶T\[peek()\]元素，依然直接入栈，我们要找的是大于自己的元素
@@ -366,10 +366,10 @@ class Solution {
 
 **题目解析：**
 
-这道题目很有意思因为它是一个可以循环的查找😏![](https://github.githubassets.com/images/icons/emoji/unicode/1f60f.png?v8)所以难度的上来了，其实也不难类比于上面两道题，脑子里想的肯定有两种策略:
+这道题目很有意思因为它是一个可以循环的查找😏所以难度的上来了，其实也不难类比于上面两道题，脑子里想的肯定有两种策略:
 
 -   第一种就是我把nums的大小扩充两倍也就是例如nums=\[1,2,1\]扩充为newNums=\[1,2,1,1,2,1\]，想法很好也能实现，但是它的空间有增大了
--   第二种😼![](https://github.githubassets.com/images/icons/emoji/unicode/1f63c.png?v8)这个就需要一点技巧了哈哈哈，咱直接把这个数组遍历两边不就行了蛮，也就是正常的 （0%3） （1%3） （2%3） (3%3)、(4%3)、（5%3）这不就遍历了两遍了，相当于数组的复制两遍，这样思路是不是清晰许多了😸![](https://github.githubassets.com/images/icons/emoji/unicode/1f638.png?v8)
+-   第二种😼这个就需要一点技巧了哈哈哈，咱直接把这个数组遍历两边不就行了蛮，也就是正常的 （0%3） （1%3） （2%3） (3%3)、(4%3)、（5%3）这不就遍历了两遍了，相当于数组的复制两遍，这样思路是不是清晰许多了😸
 
 然后具体的思路解析在说一遍
 
@@ -426,7 +426,7 @@ class Solution {
 
 **题解思路:**
 
-1.  先说说**暴力**的解法，很容易想的策略：就是对每个柱子进行分析看（排除第一根和最后一根其上面不存水）比如我们找到了第3根柱子，我们从此开始进行往其**左侧**寻找最高的柱子记为LHeight=2,下标为2，然后在从其右侧找到最高的柱子记为RHeigit=3，下标为6，其实这里的下标也就不那么重要了，观察可以发现柱子3的上面有一个水格子那么这是怎么来的呢？我们得到了两个高度，根据木桶理论😄![](https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8)瞎说的就是去这俩最短的那个也就是2，然后再减去当前柱子的高度nums\[i\]就可以得出雨水的高度，你在试试柱子四可以得出其高度为2,所以一切都明晰了,详细代码如下:
+1.  先说说**暴力**的解法，很容易想的策略：就是对每个柱子进行分析看（排除第一根和最后一根其上面不存水）比如我们找到了第3根柱子，我们从此开始进行往其**左侧**寻找最高的柱子记为LHeight=2,下标为2，然后在从其右侧找到最高的柱子记为RHeigit=3，下标为6，其实这里的下标也就不那么重要了，观察可以发现柱子3的上面有一个水格子那么这是怎么来的呢？我们得到了两个高度，根据木桶理论😄瞎说的就是去这俩最短的那个也就是2，然后再减去当前柱子的高度nums\[i\]就可以得出雨水的高度，你在试试柱子四可以得出其高度为2,所以一切都明晰了,详细代码如下:
 
 ```java
 class Solution {
@@ -462,10 +462,10 @@ class Solution {
 }
 ```
 
-1.  **双指针解法**上面的思路其时时超时因为它每根柱子都要往左往右进行遍历增加了不必要的循环，所以我们是不是有又有了一个idea😏![](https://github.githubassets.com/images/icons/emoji/unicode/1f60f.png?v8)其实没有哈哈简单提一下就是可以用双指针，根据上到题目的灵感，他要每根柱子的左侧最高和右侧最高是吧，我们就记录左侧和右侧最高不就行了吗,于是一个算法浮现出来:
+1.  **双指针解法**上面的思路其时时超时因为它每根柱子都要往左往右进行遍历增加了不必要的循环，所以我们是不是有又有了一个idea😏其实没有哈哈简单提一下就是可以用双指针，根据上到题目的灵感，他要每根柱子的左侧最高和右侧最高是吧，我们就记录左侧和右侧最高不就行了吗,于是一个算法浮现出来:
     
     -   首先定义两个数组就是maxLHeight和maxRHeight记录每个下标的左侧和右侧的最高柱子
-    -   记录完成后就可以进行求和运算了，记住需要排除第一根和最后一根(他们不存水的😄![](https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8))
+    -   记录完成后就可以进行求和运算了，记住需要排除第一根和最后一根(他们不存水的😄)
     -   计算结果和暴力求解一样也是取min(maxLHeight,maxRHeight)-height\[i\]
     
     代码如下所示:
@@ -588,7 +588,7 @@ class Solution {
 
 **题目解析:**
 
-1.  第一种**暴力解法**，**超时**但是思路简单，首先对于每个柱子逐一进行考虑，遍历每根柱子的左侧和右侧，分别找到第一个比他小的元素，然后求出其宽度和高度进行乘积计算。举个🌰![](https://github.githubassets.com/images/icons/emoji/unicode/1f330.png?v8)对于元素2来说其左边比他小的下标为-1，右边比起小的下标为1所以它的宽度为right-left-1也就是1他自己的宽度，高度为它本身2可以计算第一个结果为2
+1.  第一种**暴力解法**，**超时**但是思路简单，首先对于每个柱子逐一进行考虑，遍历每根柱子的左侧和右侧，分别找到第一个比他小的元素，然后求出其宽度和高度进行乘积计算。举个🌰对于元素2来说其左边比他小的下标为-1，右边比起小的下标为1所以它的宽度为right-left-1也就是1他自己的宽度，高度为它本身2可以计算第一个结果为2
 
 ​ 接着我们到第二个元素1，首先找左侧最小和右侧最小下标分别-1和6，计算其宽度为6，高度为1，所以总的最大面积为6更细最大值
 
@@ -624,7 +624,7 @@ class Solution {
     -   首先需要两个长度为n的数组minLeftIndex和minRightIndex来记录第i个下标的左侧和右侧第一次出现比height\[i\]小的元素下标
     -   记录完成后就进行一次for循环求和sum=heights\[i\]\*(minRightIndex\[i\]-minLeftIndex\[i\]-1)得出最大的值
 
-看着很简单是不?😼![](https://github.githubassets.com/images/icons/emoji/unicode/1f63c.png?v8)nono重点是在那个下标的求解很多坑的~~我们来分析一波求其下标:
+看着很简单是不?😼nono重点是在那个下标的求解很多坑的~~我们来分析一波求其下标:
 
 -   求左侧的最小下标为了避免死循环，也就是和暴力求解一样，第一根柱子的最左侧的下标一定是-1，知道这个就简单了
 -   第一根柱子已经考虑了那么就从第二根下标为1开始进行遍历，思路是这个：当从第i根开始时我们知道了第i-1根柱子最左侧的最小下标，那么有以下几种情况
@@ -668,7 +668,7 @@ class Solution {
 }
 ```
 
-1.  第三种解法**单调栈的解法**：不同于前几道题，本体的单调栈从顶到底单调递减，当加入的元素大于小于栈顶元素的时候需要进行出栈，但是这里有一个问题就是边界需要规定一下，否则会出现一种情况如果该数组单调递增的话，一直入栈导致结果为0，或者单调递减一开始就直接出现空操作导致异常，所以需要对数组进行扩容，将其头和尾增加一个元素😏![](https://github.githubassets.com/images/icons/emoji/unicode/1f60f.png?v8)0这样就好了
+1.  第三种解法**单调栈的解法**：不同于前几道题，本体的单调栈从顶到底单调递减，当加入的元素大于小于栈顶元素的时候需要进行出栈，但是这里有一个问题就是边界需要规定一下，否则会出现一种情况如果该数组单调递增的话，一直入栈导致结果为0，或者单调递减一开始就直接出现空操作导致异常，所以需要对数组进行扩容，将其头和尾增加一个元素😏0这样就好了
 
 ​ 具体思路和雨水的思路基本上相同，就一些细节需要修改下，这里就不仔细的说了，细看雨水的题目
 
