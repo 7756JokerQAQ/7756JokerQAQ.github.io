@@ -82,13 +82,10 @@ const config: Config = {
                     onInlineAuthors: 'warn',
                     onUntruncatedBlogPosts: 'warn',
                 },
-                // TODO[统计]: 启用 Google Analytics —— 填入你自己的 trackingID 后取消注释
-                /*
                 gtag: {
-                    trackingID: 'G-XXXXXXXXXX',
+                    trackingID: 'G-MET489NSDD',
                     anonymizeIP: true,
                 },
-                */
                 theme: {
                     customCss: './src/css/custom.css',
                 },
