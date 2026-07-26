@@ -25,14 +25,11 @@ function BlogPostPageContent({sidebar, children}) {
     const commentElement = useRef(null);
 
     useEffect(() => {
-        // TODO[评论]: 在 https://giscus.app 生成你的配置后填入下方三项即可启用博客评论
         const giscusConfig = {
-            repo: '',       // e.g. 'your-name/your-repo'
-            repoId: '',     // 由 giscus.app 生成
-            categoryId: '', // 由 giscus.app 生成
+            repo: '7756JokerQAQ/7756JokerQAQ.github.io',
+            repoId: 'R_kgDOTj7qNA',
+            categoryId: 'DIC_kwDOTj7qNM4DCAV6',
         };
-        // 未配置前不注入，避免使用原作者的评论配置
-        if (!giscusConfig.repo || !giscusConfig.repoId || !giscusConfig.categoryId) return;
 
         let s = document.createElement("script");
         s.src = "https://giscus.app/client.js";
