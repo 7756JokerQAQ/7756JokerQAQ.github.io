@@ -1,0 +1,10 @@
+joker:
+  name: 沉寂
+  title: 开发者
+  url: https://7756jokerqaq.github.io
+  # image_url: https://...  # 可选：填你的头像 URL；不填请保持注释（写成空值会导致构建报错）
+  page:
+    # customize the url of the author page at /blog/authors/<permalink>
+    permalink: '/all-articles'
+  socials:
+    github: 7756JokerQAQ

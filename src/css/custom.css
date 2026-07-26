@@ -1,0 +1,249 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS Framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+    --ifm-color-primary: #12affa;
+    --ifm-color-primary-dark: #05a1ec;
+    --ifm-color-primary-darker: #0598df;
+    --ifm-color-primary-darkest: #047eb8;
+    --ifm-color-primary-light: #2cb8fb;
+    --ifm-color-primary-lighter: #39bcfb;
+    --ifm-color-primary-lightest: #61cafc;
+    --ifm-code-font-size: 95%;
+    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+    --ifm-color-primary: #12affa;
+    --ifm-color-primary-dark: #05a1ec;
+    --ifm-color-primary-darker: #0598df;
+    --ifm-color-primary-darkest: #047eb8;
+    --ifm-color-primary-light: #2cb8fb;
+    --ifm-color-primary-lighter: #39bcfb;
+    --ifm-color-primary-lightest: #61cafc;
+    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* 让 Markdown 表格撑满容器宽度，列宽随内容自适应 */
+.markdown table {
+    width: 100%;
+    display: table;
+    table-layout: auto; /* 列宽随内容动态变化 */
+}
+
+/* 单元格内容允许换行，避免被撑得无限宽 */
+.markdown th,
+.markdown td {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+/* Mermaid 图表 SVG 自适应填满容器宽度，整体按比例放大（宽高一起变大） */
+.mermaid svg {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+/* 文章 / 博客正文图片居中展示（docs 与 blog 正文均在 .markdown 容器内） */
+.markdown img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* 修改所有文章的标题大小（温和收紧梯度，正文 15px） */
+article h1 {
+    font-size: 1.625rem !important; /* 26px */
+}
+
+article h2 {
+    font-size: 1.375rem !important; /* 22px */
+}
+
+article h3 {
+    font-size: 1.1875rem !important; /* 19px */
+}
+
+article h4 {
+    font-size: 1.0625rem !important; /* 17px */
+}
+
+article h5 {
+    font-size: 0.9375rem !important; /* 15px */
+}
+
+/* 强制修改文章页主标题大小 */
+.title_kItE {
+    font-size: 1.625rem !important; /* 26px */
+}
+
+/* 强制修改列表卡片标题（仅卡片内标题，不再用全局 .text--truncate 以免误伤描述） */
+article.col.col--6:has(> .card) > .card > h2 {
+    font-size: 1rem !important;
+}
+
+/* ===== intro 页 DocCardList 卡片瘦身 ===== */
+/* 锁定「包裹卡片的列」，避免误伤其它 col--6 元素；CSS Module 哈希类名不可用，故用结构选择器 */
+
+/* 1. 卡片：内边距收紧 + flex 纵向布局；高度由内容撑开（描述限 2 行，天然接近等高，避免裁切） */
+article.col.col--6:has(> .card) > .card {
+    padding: 0.45rem 0.65rem !important;
+    margin: 0.2rem !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* 标题：收紧下方间距（仍沿用 text--truncate 单行截断） */
+article.col.col--6:has(> .card) > .card > h2 {
+    margin-bottom: 0.4rem !important;
+}
+
+/* 2. 描述：调小字号 + 限 2 行截断；超出部分靠原生 title 属性 hover 悬浮展示（Docusaurus 已内置） */
+article.col.col--6:has(> .card) > .card > p {
+    font-size: 0.85rem !important;
+    margin: 0 !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+/* 3. 卡片纵向间距：2rem(32px) → 1rem(16px) */
+article.col.col--6:has(> .card) {
+    margin-bottom: 1rem !important;
+}
+
+/* 4. 列数：2 列（默认 col--6） / 手机 1 列 */
+@media (max-width: 600px) {
+    article.col.col--6:has(> .card) {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+/*!* 或者只修改博客文章的标题 *!*/
+/*.blog-post-title h1 {*/
+/*  font-size: 1rem !important;*/
+/*}*/
+
+/*!* 修改文档页面的标题 *!*/
+/*.theme-doc-markdown h1 {*/
+/*  font-size: 1rem !important;*/
+/*}*/
+
+/* 修改文章正文字符大小 */
+article {
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* 修改段落文字 */
+article p {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* 修改博客文章正文 */
+.blog-post-content {
+    font-size: 15px;
+}
+
+/* 修改文档页面正文 */
+.theme-doc-markdown {
+    font-size: 15px;
+}
+
+/* ===== 页脚：透明融入页面，仅一行版权 ===== */
+/* 背景透明（跟随页面），去掉深色底；顶部仅一条细分隔线 */
+.footer,
+.footer--dark {
+    --ifm-footer-background-color: transparent;
+    --ifm-footer-color: var(--ifm-font-color-base);
+    background-color: transparent;
+    border-top: 1px solid var(--ifm-color-emphasis-200);
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+/* 版权文字：居中，颜色与正文一致 */
+.footer__bottom {
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+/* ===== PDF 阅读器（PdfViewer 组件） ===== */
+/* 去掉页码 number 输入框的浏览器上下箭头 */
+.pdf-viewer input[type="number"]::-webkit-outer-spin-button,
+.pdf-viewer input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.pdf-viewer input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+/* 工具栏按钮：悬停 / 按下 / 聚焦 / 禁用 */
+.pdf-viewer .pdfr-btn {
+    transition: background-color 0.15s ease, color 0.15s ease, opacity 0.15s ease;
+}
+.pdf-viewer .pdfr-btn:hover:not(:disabled) {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+.pdf-viewer .pdfr-btn:active:not(:disabled) {
+    background-color: rgba(255, 255, 255, 0.13);
+}
+.pdf-viewer .pdfr-btn:focus-visible {
+    outline: 2px solid #12affa;
+    outline-offset: 1px;
+}
+.pdf-viewer .pdfr-btn:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+/* 页码输入框：聚焦时下沿出现强调色细线 */
+.pdf-viewer .pdfr-input {
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s ease;
+}
+.pdf-viewer .pdfr-input:focus {
+    outline: none;
+    border-bottom-color: #12affa;
+}
+
+/* 加载旋转动画 */
+@keyframes pdfr-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+.pdf-viewer .pdfr-spinner {
+    animation: pdfr-spin 0.9s linear infinite;
+}
+
+/* 进度条过渡 */
+.pdf-viewer .pdfr-progress > span {
+    transition: width 0.3s ease;
+}
+
+/* 尊重「减少动态效果」系统设置 */
+@media (prefers-reduced-motion: reduce) {
+    .pdf-viewer .pdfr-spinner {
+        animation: none;
+    }
+    .pdf-viewer .pdfr-progress > span,
+    .pdf-viewer .pdfr-btn {
+        transition: none;
+    }
+}

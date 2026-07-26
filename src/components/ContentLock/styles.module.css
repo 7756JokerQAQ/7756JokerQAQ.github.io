@@ -1,0 +1,123 @@
+.lockWrapper {
+    position: relative;
+}
+
+/* 内容照常渲染，但限高截断：标题 + 开头部分可见，超出部分被隐藏 */
+.previewBox {
+    overflow: hidden;
+    /* maxHeight 由组件内联注入（previewHeight px） */
+}
+
+/* 实心锁定面板：不透明，与页面底色一致，完全遮住下方截断内容 */
+.lockPanel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 2.5rem 1rem;
+    background: var(--ifm-background-color);
+}
+/* 正文渐变淡出：向上叠一段较高渐变，让文章正文平滑地淡入背景，而非硬切 */
+.lockPanel::before {
+    content: '';
+    position: absolute;
+    top: -220px;
+    left: 0;
+    right: 0;
+    height: 220px;
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        transparent 35%,
+        var(--ifm-background-color) 100%
+    );
+    pointer-events: none;
+}
+
+.card {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 360px;
+    padding: 1.75rem 1.5rem;
+    text-align: center;
+    background: var(--ifm-background-color);
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.lockIcon {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.title {
+    margin: 0.5rem 0 0;
+    color: var(--ifm-color-primary);
+    font-size: 1.15rem;
+}
+
+.desc {
+    margin: 0.5rem 0 0.25rem;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--ifm-color-content-secondary);
+}
+
+.qr {
+    display: block;
+    width: 140px;
+    height: 140px;
+    margin: 0.75rem auto 0.25rem;
+    border-radius: 8px;
+}
+
+.inputRow {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+.input {
+    flex: 1;
+    min-width: 0;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.95rem;
+    color: var(--ifm-font-color-base);
+    background: var(--ifm-background-color);
+    border: 1px solid var(--ifm-color-emphasis-400);
+    border-radius: 6px;
+    letter-spacing: 0.1em;
+}
+
+.input:focus {
+    outline: none;
+    border-color: var(--ifm-color-primary);
+    box-shadow: 0 0 0 2px rgba(18, 175, 250, 0.2);
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    background: var(--ifm-color-primary);
+    border: none;
+    border-radius: 6px;
+    transition: background var(--ifm-transition-fast) ease;
+}
+
+.btn:hover:not(:disabled) {
+    background: var(--ifm-color-primary-dark);
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.error {
+    margin: 0.6rem 0 0;
+    font-size: 0.85rem;
+    color: #e5484d;
+}

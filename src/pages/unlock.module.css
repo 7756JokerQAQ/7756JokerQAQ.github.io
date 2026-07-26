@@ -1,0 +1,20 @@
+.lead {
+    color: var(--ifm-color-content-secondary);
+}
+
+.codeBox {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 0.5rem;
+    color: var(--ifm-color-primary);
+    font-family: var(--ifm-font-family-monospace);
+    border: 1px dashed var(--ifm-color-emphasis-300);
+    border-radius: 12px;
+}
+
+.hint {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
