@@ -13,7 +13,7 @@ title: "Leecode刷题"
 
 **示例 1：**
 
-![img](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303131403806.jpeg)
+![img](/img/cos/learn/202303131403806.jpeg)
 
 ```java
 输入：[1,8,6,2,5,4,8,3,7]
@@ -152,7 +152,7 @@ class Solution {
 
 给出数字到字母的映射如下（与电话按键相同）。注意 1 不对应任何字母。
 
-![img](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303132137796.png)
+![img](/img/cos/learn/202303132137796.png)
 
 **示例 1：**
 
@@ -230,7 +230,7 @@ class Solution {
 
 **示例 1：**
 
-![img](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303132313967.jpeg)
+![img](/img/cos/learn/202303132313967.jpeg)
 
 ```plaintext
 输入：l1 = [1,2,4], l2 = [1,3,4]
@@ -301,7 +301,7 @@ if (list1 == null){
 
 -   `1 <= n <= 8`
 
-![树的分类](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303140839555.png)
+![树的分类](/img/cos/learn/202303140839555.png)
 
 **解题思路：**
 
@@ -615,7 +615,7 @@ class Solution {
 
 **示例 1：**
 
-![img](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303142002569.png)
+![img](/img/cos/learn/202303142002569.png)
 
 ```plaintext
 输入：m = 3, n = 7
@@ -666,7 +666,7 @@ class Solution {
 
 **示例 1：**
 
-![img](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303151030746.jpeg)
+![img](/img/cos/learn/202303151030746.jpeg)
 
 ```plaintext
 输入：n = 3
@@ -688,19 +688,19 @@ class Solution {
 
 纯纯的数学问题，如果理解了这个数学原理这个小题还是手到擒来😏 你这样来看一下我先去偷几张图片
 
-![image-20230315103427506](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303151034600.png)
+![image-20230315103427506](/img/cos/learn/202303151034600.png)
 
-![image-20230315103510335](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303151035388.png)
+![image-20230315103510335](/img/cos/learn/202303151035388.png)
 
-![image-20230315103523291](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303151035345.png)
+![image-20230315103523291](/img/cos/learn/202303151035345.png)
 
-![image-20230315103535885](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303151035946.png)
+![image-20230315103535885](/img/cos/learn/202303151035946.png)
 
-![image-20230315103549071](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303151035135.png)
+![image-20230315103549071](/img/cos/learn/202303151035135.png)
 
-![image-20230315103602307](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303151036372.png)
+![image-20230315103602307](/img/cos/learn/202303151036372.png)
 
-![image-20230315103612193](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303151036259.png)
+![image-20230315103612193](/img/cos/learn/202303151036259.png)
 
 看懂了吗？大概就是当你以某个值为根节点的时候就需要分成两部分右子树(i-1)和左子树(n-i)那么总的情况就是两者相乘，😄然后好玩的来了，对于右子树是不是还可以继续向下递归，左子树同理，然后就把自己给递归死了😭不要着急,递归总有个头，头是什么呢？当然是n=1和n=0呀他们两个的结果都为1，所以一切的变得好起来了
 
@@ -742,7 +742,7 @@ class Solution {
 
 **示例 1：**
 
-![img](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303152012442.jpeg)
+![img](/img/cos/learn/202303152012442.jpeg)
 
 ```plaintext
 输入：root = [1,2,5,3,4,null,6]
@@ -802,7 +802,7 @@ class Solution {
 
 **示例 1：**
 
-![img](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303160917576.jpeg)
+![img](/img/cos/learn/202303160917576.jpeg)
 
 ```plaintext
 输入：head = [4,2,1,3]
@@ -811,7 +811,7 @@ class Solution {
 
 **示例 2：**
 
-![img](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303160917579.jpeg)
+![img](/img/cos/learn/202303160917579.jpeg)
 
 ```plaintext
 输入：head = [-1,5,3,4,0]
@@ -834,7 +834,7 @@ class Solution {
 
 看到这道题进行排序一个大胆而又简单的方法浮现再脑中首先对收集所有的元素😏到一个数组中，然后排序，最后构造新的链表😂（这个方法切实可行都搞出来了）就是时间复杂度和空间复杂度有些高，不会吧不会这样搞吧！当然不是了😂 进入正题,我们看到排序这道题而且又要快速的进行，首先想到的不二法门就是归并排序:很方便的如下图:
 
-![image-20230316092841019](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303160928100.png)
+![image-20230316092841019](/img/cos/learn/202303160928100.png)
 
 通过递归实现归并排序主要包含两个步骤：
 
@@ -1011,7 +1011,7 @@ class Solution {
 
 做这道题一开始没什么思路，想法是有的就是优点难以实现😂第一个想法就是我能不能构造一个链表❓然后再利用快慢指针，因为如果不符合题意得要求肯定是存在环路，咱只需要快指针能追得上满指针就行了，然后仔细一想，不对呀！😹这个链表不止有一条，有许多条，这个肯定行不通，然后就思索第二条出路,这部参考一下，nice竟然使用了图的方法构造一个入度表，每次让入度为零的点出栈，对别的点进行消边，如果别的点的入度为零继续入栈，然后出栈，等等等有些迷瞪了？看图说话😃
 
-![207-1.png](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303172031159.png),![207-2.png](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303172031176.png),![207-3.png](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303172031412.png),![207-4.png](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303172031101.png),![207-5.png](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303172031270.png),![207-6.png](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303172031105.png),![207-7.png](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303172031710.png),![207-8.png](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303172031688.png),![207-9.png](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303172031752.png),![207-10.png](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303172031698.png),![207-11.png](/img/leetcode/e91ef7c5d01de19f3ef7126e3503430867f897d01f81b7a7607dd551a8743786-207-11.png),![207-12.png](/img/leetcode/7fcc5454f1562a1b231aa1fba29bd023c719730257776a10a64c5f5282660fb8-207-12.png),![207-13.png](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303172031516.png)
+![207-1.png](/img/cos/learn/202303172031159.png),![207-2.png](/img/cos/learn/202303172031176.png),![207-3.png](/img/cos/learn/202303172031412.png),![207-4.png](/img/cos/learn/202303172031101.png),![207-5.png](/img/cos/learn/202303172031270.png),![207-6.png](/img/cos/learn/202303172031105.png),![207-7.png](/img/cos/learn/202303172031710.png),![207-8.png](/img/cos/learn/202303172031688.png),![207-9.png](/img/cos/learn/202303172031752.png),![207-10.png](/img/cos/learn/202303172031698.png),![207-11.png](/img/leetcode/e91ef7c5d01de19f3ef7126e3503430867f897d01f81b7a7607dd551a8743786-207-11.png),![207-12.png](/img/leetcode/7fcc5454f1562a1b231aa1fba29bd023c719730257776a10a64c5f5282660fb8-207-12.png),![207-13.png](/img/cos/learn/202303172031516.png)
 
 对对对就是这个思路，咱就一个一个点的删除当删除到最后看看是不是将原本传入的numCourses置位0了如果成功，恭喜你：一切都成功了，下面看代码说话，这个程序代码优点绕，奶奶的确实绕!看看理解理解吧
 

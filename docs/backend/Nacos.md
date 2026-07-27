@@ -44,17 +44,17 @@ spring:
 
 然后重启，登录到nacos的界面就可以看到注册的服务信息:
 
-![](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303191906541.png)
+![](/img/cos/learn/202303191906541.png)
 
 #### **2, Nacos服务分级存储模型**
 
-![](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303191906245.png)
+![](/img/cos/learn/202303191906245.png)
 
 **服务跨集群调用问题**
 
 服务调用尽可能选择本地集群的服务，跨集群调用延迟较高，当本地无法访问时再去访问其他的集群例如:
 
-![image-20230319191140684](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303191911730.png)
+![image-20230319191140684](/img/cos/learn/202303191911730.png)
 
 当调用的时候优先调用杭州的集群分布当杭州的无法调用再去调用上海的user-service
 
@@ -73,7 +73,7 @@ spring:
 
 > 在控制台可以看到集群的变化
 
-![](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303191916003.png)
+![](/img/cos/learn/202303191916003.png)
 
 **Nacos服务分级存储模型**
 
@@ -129,7 +129,7 @@ userservice:
 
 具体实现方法直接再nacos控制台进行修改：如找到user-service的实例列表，点击编辑，即可修改权重
 
-![image-20210713235133225](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303191924323.png)
+![image-20210713235133225](/img/cos/learn/202303191924323.png)
 
 直接对权重进行编辑即可。注意：如果修改权重为0则该实例永远不会被访问
 
@@ -137,19 +137,19 @@ userservice:
 
 Nacos中服务存储和数据存储的最外层都是一个名为namespace的东西，用来做最外层隔离：
 
-![image-20230319192716865](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303191927968.png)
+![image-20230319192716865](/img/cos/learn/202303191927968.png)
 
 > 具体实现策略直接再控制台中进行创建namespace用来隔离不同的环境
 
-![image-20230319192756816](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303191927871.png)
+![image-20230319192756816](/img/cos/learn/202303191927871.png)
 
 > 然后填写一个新的命名空间信息：
 
-![image-20230319192829920](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303191928969.png)
+![image-20230319192829920](/img/cos/learn/202303191928969.png)
 
 > 保存后会在控制台看到这个命名空间的id：
 
-![image-20230319192848812](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303191928857.png)
+![image-20230319192848812](/img/cos/learn/202303191928857.png)
 
 > 修改order-service的application.yml，添加namespace：
 
@@ -171,7 +171,7 @@ spring:
 
 ③不同namespace下的服务互相不可见
 
-![image-20230319193052260](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303191930353.png)
+![image-20230319193052260](/img/cos/learn/202303191930353.png)
 
 **临时实例和非临时实例**
 
@@ -213,21 +213,21 @@ spring:
 
 **配置更改热更新**
 
-![image-20230319194140073](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303191941128.png)
+![image-20230319194140073](/img/cos/learn/202303191941128.png)
 
 **统一配置管理**
 
 首先在nacos中添加配置信息:
 
-![image-20230319194221281](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303191942345.png)
+![image-20230319194221281](/img/cos/learn/202303191942345.png)
 
-![image-20230319194230490](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303191942546.png)
+![image-20230319194230490](/img/cos/learn/202303191942546.png)
 
 > 注意：项目的核心配置，需要热更新的配置才有放到nacos管理的必要。基本不会变更的一些配置还是保存在微服务本地比较好。
 > 
 > 接着配置获取的步骤如下图所示
 
-![img](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303191948672.png)
+![img](/img/cos/learn/202303191948672.png)
 
 所以这里我们需要写一个bootstrap.yml（它的优先级最高项目启动时先读取它的配置信息,会在application.yml之前被读取）文件其中得包含nacos的地址信息，然后再访问到本地的配置文件。具体操作如下所示:
 
@@ -261,13 +261,13 @@ spring:
 
 本例中，就是去读取`userservice-dev.yaml`：
 
-![](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303191951761.png)
+![](/img/cos/learn/202303191951761.png)
 
 > 读取nacos配置信息
 
 最简单的方法在user-service中的UserController中添加业务逻辑，读取pattern.dateformat配置：
 
-![image-20210714170337448](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303191952530.png)
+![image-20210714170337448](/img/cos/learn/202303191952530.png)
 
 @Value注入nacos的属性信息
 
@@ -285,11 +285,11 @@ Nacos中的配置文件变更后，微服务无需重启就可以感知。不过
 
 **方式一:在@Value注入的变量所在类上添加注解@RefreshScope**
 
-![image-20230319195437804](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303191954875.png)
+![image-20230319195437804](/img/cos/learn/202303191954875.png)
 
 **方式二：使用@ConfigurationProperties注解**(常用)
 
-![image-20230319195518864](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303191955912.png)
+![image-20230319195518864](/img/cos/learn/202303191955912.png)
 
 Nacos配置更改后，微服务可以实现热更新，方式:
 
@@ -304,7 +304,7 @@ Nacos配置更改后，微服务可以实现热更新，方式:
 -   建议将一些关键参数，需要运行时调整的参数放到nacos配置中心，一般都是自定义配置
     
 
-![image-20230319195633449](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303191956495.png)
+![image-20230319195633449](/img/cos/learn/202303191956495.png)
 
 **多服务共享配置**
 
@@ -312,12 +312,12 @@ Nacos配置更改后，微服务可以实现热更新，方式:
 
 方式一：
 
-![image-20230319195821534](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303191958605.png)
+![image-20230319195821534](/img/cos/learn/202303191958605.png)
 
 方式二：
 
-![image-20230319195855010](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303191958080.png)
+![image-20230319195855010](/img/cos/learn/202303191958080.png)
 
 **Nacos集群搭建**
 
-![image-20230319195920525](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303191959567.png)
+![image-20230319195920525](/img/cos/learn/202303191959567.png)

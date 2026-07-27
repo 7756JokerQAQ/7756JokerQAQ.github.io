@@ -403,7 +403,7 @@ class Solution {
 
 **示例 1：**
 
-![img](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303210906502.png)
+![img](/img/cos/learn/202303210906502.png)
 
 ```plaintext
 输入：height = [0,1,0,2,1,0,1,3,2,1,2,1]
@@ -506,14 +506,14 @@ class Solution {
     
     1.  **单调栈解法:**有了上面的两种思路，但是我们如何和单调栈联系到一起呢?既然也是求左侧和右侧的最大值，可不可以也用单调栈进行求解其实也是可以的可能效果不如双指针法，上面的两种都是按照**列**进行求雨水，也就是每个柱子上的雨水，当我们利用单调栈的话，就需要按照行来求:如下图
 
-![](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303210937762.png)
+![](/img/cos/learn/202303210937762.png)
 
 那么来考虑一下单调栈从栈顶到栈底是**递增**的还是**递减**的？就拿上图来说对于柱子3，柱子二入栈后他也需要入栈，直至找到第一个大于它的柱子，然后就开始计算，所以很明显这是个从栈顶到栈底递增的栈，那么继续入栈会出现以下三种情况:
 
 -   当前遍历的元素高度小于栈顶元素的高度height\[i\]&lt;height\[stack.peek()\]，执行入栈操作
 -   当前遍历的元素高度等于栈顶元素的高度height\[i\]=height\[stack.peek()\]，执行更新操作,也就是当前的记录的栈顶出栈，新的栈顶入栈，因为两根柱子并列，对于我们来求解雨水时一定是用靠右边的柱子进行计算的:
 
-![image-20230321094450216](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303210944404.png)
+![image-20230321094450216](/img/cos/learn/202303210944404.png)
 
 -   当前遍历的元素高度大于栈顶元素的高度height\[i\]>height\[stack.peek()\]，到关键点了这里出现了凹槽，首先记录当前栈顶元素(也就是相对的下标)同时也要出栈,此时栈顶记录的就是当前下标为mid的左侧第一个比他高的，遍历的height\[i\]是mid下标右侧第一个比他高的元素:那么计算方式:
     -   首先得到其高度也就是h=min(height\[stack.peek()\],height\[i\])-height\[mid\] :例如对于柱子4的高度为 h=min(1,1)-0=1
@@ -564,7 +564,7 @@ class Solution {
 
 **示例 1:**
 
-![img](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303211000945.jpeg)
+![img](/img/cos/learn/202303211000945.jpeg)
 
 ```plaintext
 输入：heights = [2,1,5,6,2,3]
@@ -574,7 +574,7 @@ class Solution {
 
 **示例 2：**
 
-![img](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303211000935.jpeg)
+![img](/img/cos/learn/202303211000935.jpeg)
 
 ```plaintext
 输入： heights = [2,4]

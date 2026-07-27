@@ -3,9 +3,9 @@ title: "面试题性的总结与回答"
 ---
 
 <!-- truncate -->
-![img](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/2019061210551736.png)
+![img](/img/cos/learn/3481/2019061210551736.png)
 
-![image-20230224093155759](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20230224093155759.png)
+![image-20230224093155759](/img/cos/learn/3481/image-20230224093155759.png)
 
 ### 1\. Java 常用的集合？
 
@@ -106,7 +106,7 @@ Comparable和Comparator接口
 
 **基本数据类型和引用数据类型的区别**
 
-![img](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/a610ff04860149ccbc3e55732f042526.png)
+![img](/img/cos/learn/3481/a610ff04860149ccbc3e55732f042526.png)
 
 每一个基本数据类型都会对应一个包装类型
 
@@ -128,7 +128,7 @@ java是一个面向对象的语言，而基本数据类型不具备面向对象�
     **java 基本数据类型、包装类、字符串、数组之间的类型转换**
     
 
-![img](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/8ff5f5752eb1446eac015180987cbbb3.png)
+![img](/img/cos/learn/3481/8ff5f5752eb1446eac015180987cbbb3.png)
 
 **优雅的将List集合转为Set集合：**
 
@@ -173,7 +173,7 @@ List<Integer> linkedHashSetList = new ArrayList<Integer>(linkedHashSet);
 
 **分类**
 
-![img](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/13170952_625693608975b29303.png)
+![img](/img/cos/learn/3481/13170952_625693608975b29303.png)
 
 无状态：指元素的处理不受之前元素的影响；
 
@@ -579,7 +579,7 @@ public String hello(@RequestHeader("User-Agent") String userAgent, Model model) 
 
 ### 15\. SpringMVC执行流程？
 
-![img](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/5220087-3c0f59d3c39a12dd.png)
+![img](/img/cos/learn/3481/5220087-3c0f59d3c39a12dd.png)
 
 1.  用户发送请求到前端控制器DispacherServlet
 2.  DispacherServlet收到请求调用处理器映射器HandlerMapping
@@ -709,13 +709,13 @@ public String hello(@RequestHeader("User-Agent") String userAgent, Model model) 
 EXPLAIN SELECT id FROM user;
 ```
 
-![image-20230225154315271](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20230225154315271.png)
+![image-20230225154315271](/img/cos/learn/3481/image-20230225154315271.png)
 
 执行上述语句会放回详细的查询计划信息：包括使用的索引、扫描的行数、连接方式等，其中的key表示索引，如果为NULL则未使用索引；
 
 ### 23.数据库的锁？
 
-![一张图彻底搞懂 MySQL 的锁机制](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/Zu4vlv7L2S.png!large)
+![一张图彻底搞懂 MySQL 的锁机制](/img/cos/learn/3481/Zu4vlv7L2S.png!large)
 
 按照锁的类型分为表锁、行锁、页锁
 
@@ -735,7 +735,7 @@ EXPLAIN SELECT id FROM user;
 -   页锁
     -   开销、加锁时间和锁粒度介于表锁和行锁之间，会出现死锁，并发处理能力一般
 
-![一张图彻底搞懂 MySQL 的锁机制](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/ZEw4DFkZI2.png!large)
+![一张图彻底搞懂 MySQL 的锁机制](/img/cos/learn/3481/ZEw4DFkZI2.png!large)
 
 悲观锁：是指在访问数据之前先对数据加锁，防止其他事务修改数据，直到当前事务完成才释放锁。悲观锁适合写多读少的场景，可以避免脏读、不可重复读和幻读等问题，但是会降低数据库的并发性能，增加死锁或超时的风险。
 
@@ -949,7 +949,7 @@ yupao:user:recommed:userId
 
 主类开启@EnableScheduling
 
-![image-20230225195214062](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20230225195214062.png)
+![image-20230225195214062](/img/cos/learn/3481/image-20230225195214062.png)
 
 给定时任务添加@Scheduling注解指定cron表达式和执行频率(不需要背);
 
@@ -1045,7 +1045,7 @@ void testWatchDog() {
 
 ### 41\. git常用命令
 
-![img](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/24bafa1f034d193c81f57897efd086e2.jpg)
+![img](/img/cos/learn/3481/24bafa1f034d193c81f57897efd086e2.jpg)
 
 -   git init\[project-name\]
 -   git clone url
@@ -1114,7 +1114,7 @@ nginx是一个软件级别的负载均衡。通过nginx的高性能，并发能�
 
 正向代理来进行上网等功能：用户访问局域网需要通过代理服务器来访问，这种代理称为正向代理，偏重于用户进行访问如下图
 
-![1534147-20200522085220242-1137326185.png](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/1534147-20200522085220242-1137326185.png)
+![1534147-20200522085220242-1137326185.png](/img/cos/learn/3481/1534147-20200522085220242-1137326185.png)
 
 **反向代理：**
 
@@ -1128,7 +1128,7 @@ nginx是一个软件级别的负载均衡。通过nginx的高性能，并发能�
 
 把动态页面和静态页面由不同的服务器来解析，加快解析速度，降低原来单个服务器的压力；如图：
 
-![1534147-20200522090350284-1607145726.png](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/1534147-20200522090350284-1607145726.png)
+![1534147-20200522090350284-1607145726.png](/img/cos/learn/3481/1534147-20200522090350284-1607145726.png)
 
 ### 44\. 多线程常见的概念和技术
 

@@ -29,9 +29,9 @@ title: "SpringBoot2 开发实用篇"
 
 **步骤②**：构建项目，可以使用快捷键激活此功能
 
-![image-20221025150834095](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20221025150834095.png)
+![image-20221025150834095](/img/cos/learn/3481/image-20221025150834095.png)
 
-![image-20221025150949793](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20221025150949793.png)
+![image-20221025150949793](/img/cos/learn/3481/image-20221025150949793.png)
 
 这样程序在运行的时候就可以进行自动构建了，实现了热部署的效果。
 
@@ -48,7 +48,7 @@ title: "SpringBoot2 开发实用篇"
 
 ​ 打开【File】，选择【settings…】,在面板左侧的菜单中找到【Compile】选项，然后勾选【Build project automatically】，意思是自动构建项目
 
-![image-20221025152000279](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20221025152000279.png)
+![image-20221025152000279](/img/cos/learn/3481/image-20221025152000279.png)
 
 ​ 自动构建项目选项勾选后
 
@@ -56,9 +56,9 @@ title: "SpringBoot2 开发实用篇"
 
 ​ 使用快捷键【Ctrl】+【Alt】+【Shit】+【/】打开维护面板，选择第1项【Registry…】
 
-![image-20221025152051460](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20221025152051460.png)
+![image-20221025152051460](/img/cos/learn/3481/image-20221025152051460.png)
 
-![image-20221025152258418](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20221025152258418.png)
+![image-20221025152258418](/img/cos/learn/3481/image-20221025152258418.png)
 
 ​ 这样程序在运行的时候就可以进行自动构建了，实现了热部署的效果。
 
@@ -212,7 +212,7 @@ public class ServerConfig {
 
 最后再说一个小技巧，使用@ConfigurationProperties注解时，会出现一个提示信息
 
-![image-20221025161509262](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20221025161509262.png)
+![image-20221025161509262](/img/cos/learn/3481/image-20221025161509262.png)
 
 出现这个提示后只需要添加一个坐标此提醒就消失了
 
@@ -326,11 +326,11 @@ public class ServerConfig {
 
 Druation常用单位如下：
 
-![image-20221025163753780](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20221025163753780.png)
+![image-20221025163753780](/img/cos/learn/3481/image-20221025163753780.png)
 
 DataSize常用单位如下：
 
-![image-20221025163822400](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20221025163822400.png)
+![image-20221025163822400](/img/cos/learn/3481/image-20221025163822400.png)
 
 当然也可以直接再yml文件中定义单位
 
@@ -345,7 +345,7 @@ servers:
 
 输入结果：
 
-![image-20221025163947253](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20221025163947253.png)
+![image-20221025163947253](/img/cos/learn/3481/image-20221025163947253.png)
 
 ### 校验
 
@@ -423,7 +423,7 @@ spring:
 
 密码就使用了0127，其实问题就出在这里了。属性注入时:**支持二进制，八进制，十六进制**
 
-![image-20221025170355914](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20221025170355914.png)
+![image-20221025170355914](/img/cos/learn/3481/image-20221025170355914.png)
 
 ​ 这个问题就处在这里了，因为0127在开发者眼中是一个字符串“0127”，但是在springboot看来，这就是一个数字，而且是一个八进制的数字。当后台使用String类型接收数据时，如果配置文件中配置了一个整数值，他是先安装整数进行处理，读取后再转换成字符串。
 

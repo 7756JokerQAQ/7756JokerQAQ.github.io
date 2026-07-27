@@ -9,13 +9,13 @@ title: "Eureka And Ribbon"
 
 现实中常常用于一些查询的案例：比如根据订单的id查询订单的功能，主要实现把订单所属的用户信息一起返回具体流程如下图所示:
 
-![image-20230319145450450](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303191454501.png)
+![image-20230319145450450](/img/cos/learn/202303191454501.png)
 
 主要进行分区快的查询，一个去查询订单数据库信息，一个查询用户模块的信息，总的组成了一个用户的全部信息。
 
 **微服务调用的实例:**
 
-![image-20230319145804998](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303191458094.png)
+![image-20230319145804998](/img/cos/learn/202303191458094.png)
 
 具体的实现方式如下:
 
@@ -70,7 +70,7 @@ public class OrderService {
 -   服务提供者：一次业务中，被其它微服务调用的服务。（提供接口给其它微服务）
 -   服务消费者：一次业务中，调用其它微服务的服务。（调用其它微服务提供的接口）
 
-![image-20230319150708060](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303191507095.png)
+![image-20230319150708060](/img/cos/learn/202303191507095.png)
 
 但是这个服务提供者和消费者并不是固定不变的，一个服务有时候两者都充当都起作用也就是提供者与消费者角色其实是**相对**的比如:
 
@@ -86,7 +86,7 @@ public class OrderService {
 
 具体实现流程如下所示:
 
-![image-20230319151207323](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303191512429.png)
+![image-20230319151207323](/img/cos/learn/202303191512429.png)
 
 首先**服务提供者和服务消费者都**将服务信息注册到eureka-server中心进行存储，我们可以看到里面有注册成功的地址信息，对于服**务消费者**来说他进行调用的时候直接拉取注册中心的user-service信息然后如果有多个端口通过负载均衡策略选择合适的端口进行远程调用。
 
@@ -186,15 +186,15 @@ public RestTemplate restTemplate() {
 
 ### 3\. Ribbon负载均衡
 
-![image-20230319153448836](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303191534901.png)
+![image-20230319153448836](/img/cos/learn/202303191534901.png)
 
 默认的原则是轮询，具体底层原理:
 
-![image-20230319153549009](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303191535080.png)
+![image-20230319153549009](/img/cos/learn/202303191535080.png)
 
 首先发起请求后，该请求被LoadBalancerInterceptor负载均衡拦截器进行拦截,接着获取请求中的服务id也就是userservice，接着拉去注册中心的userservice服务信息返回服务的列表，根据负载均衡策略(IRule可以自己定义默认为轮询)选择合适的端口,端口选择完后修改url发起请求的地址。
 
-![image-20230319154034973](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/202303191540054.png)
+![image-20230319154034973](/img/cos/learn/202303191540054.png)
 
 **负载均衡策略**
 

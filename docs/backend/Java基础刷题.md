@@ -5,7 +5,7 @@ title: "Java基础刷题"
 <!-- truncate -->
 #### 1.继承自 Collection 接口的容器
 
-![img](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/837161_1488616442711_250E74268F38A4202D8C30E4329DEBCC)
+![img](/img/cos/learn/3481/837161_1488616442711_250E74268F38A4202D8C30E4329DEBCC)
 
 **二.局部内部类可以用哪些修饰符修饰**
 
@@ -21,7 +21,7 @@ title: "Java基础刷题"
 
 5、外部类不能访问局部内部类，只能在方法体中访问局部内部类，且访问必须在内部类定义之后。
 
-![image-20230120205310361](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20230120205310361.png)
+![image-20230120205310361](/img/cos/learn/3481/image-20230120205310361.png)
 
 ①实例化：是把类创建为对象的过程。格式一般为:｛类名 对象名 = new 类名（参数1，参数2…参数n）构成｝，也就是new对象。
 
@@ -45,14 +45,14 @@ Data0bject对象中的word和i的值分别为
 -   HttpServletResponse方法调用客户端回应了一个定制的HTTP回应头:response.setHeader(“X-MyHeader”,”34”) response.addHeader(“X-Header”,”34”)
 -   局部变量不能用static来修饰
 
-![image-20230120211012620](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20230120211012620.png)
+![image-20230120211012620](/img/cos/learn/3481/image-20230120211012620.png)
 
 -   LinkedList是继承自AbstractSequentialList（抽象类，实现了List接口）的，并且实现了List接口。
 -   AbstractSet是实现了Set接口的，本身是一个抽象类。继承自AbstractCollection（抽象类，实现了Collection接口）
 -   HashSet是继承自AbstractSet，实现了Set接口。
 -   WeakMap不存在于java集合框架的。只有一个叫做WeakHashMap（继承自AbstractMap）。
 
-![img](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/740942_1470042423855_86F5A9F9F791DD7EA7C96F158F0FEA87)
+![img](/img/cos/learn/3481/740942_1470042423855_86F5A9F9F791DD7EA7C96F158F0FEA87)
 
 -   方法重载是一个类中定义了多个方法名相同的函数，而他们的参数的数量不同或者数量相同而类型次序不同
 -   方法重写是在子类和父类的函数名字相同而且参数的个数与类型一样,返回值也一样的方法,就称为重写(Overriding)，重写是子类与父类的一种多态性表现
@@ -75,13 +75,13 @@ Hash的前提是实现equals()和hashCode()两个方法，那么HashCode()的作
 -   off-heap叫做堆外内存，将你的对象从堆中脱离出来序列化，然后存储在一大块内存中，这就像它存储到磁盘上一样，但它仍然在RAM中。对象在这种状态下不能直接使用，它们必须首先反序列化，也不受垃圾收集。序列化和反序列化将会影响部分性能（所以可以考虑使用FST-serialization）使用堆外内存能够降低GC导致的暂停。堆外内存不受垃圾收集器管理，也不属于老年代，新生代。
     
 
-![image-20230123234759250](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20230123234759250.png)
+![image-20230123234759250](/img/cos/learn/3481/image-20230123234759250.png)
 
 选择B : 能够读写文件的数据流是`OutputStream`和`InputStream` File能操作文件本身，但是不能对文件进行修改
 
 **监视器** **”monitor”** 是操作系统实现同步的重要基础概念，同样它也用在JAVA的线程同步中， 在语法的表现就是synchronized
 
-![image-20230124000557336](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20230124000557336.png)
+![image-20230124000557336](/img/cos/learn/3481/image-20230124000557336.png)
 
 ​ A.StringBuilder线程不安全，StringBuffer线程安全。
 
@@ -95,7 +95,7 @@ D.volatile关键字有两个作用：
 
 2.并发环境有序性：通过对volatile变量采取内存屏障（Memory barrier）的方式来防止编译重排序和CPU指令重排序，具体方式是通过在操作volatile变量的指令前后加入内存屏障，来实现happens-before关系，保证在多线程环境下的数据交互不会出现紊乱。
 
-![image-20230124002016356](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20230124002016356.png)
+![image-20230124002016356](/img/cos/learn/3481/image-20230124002016356.png)
 
 A—————抽象类不一定含有抽象方法，接口中的方法都是抽象方法。接口中的方法默认修饰符有public abstract。
 
@@ -105,22 +105,22 @@ C—————抽象类和接口中的方法都没有方法体。抽象类中�
 
 D—————抽象类可以含有私有成员变量，接口不含有私有成员变量。接口中的成员变量都是public static final的，一般用作常量。
 
-![image-20230124002205840](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20230124002205840.png)
+![image-20230124002205840](/img/cos/learn/3481/image-20230124002205840.png)
 
 -   CountDownLatch 是等待一组线程执行完，才执行后面的代码。此时这组线程已经执行完。
 -   CyclicBarrier 是等待一组线程至某个状态后再同时全部继续执行线程。此时这组线程还未执行完。
 -   Semaphore 通常我们叫它信号量， 可以用来控制同时访问特定资源的线程数量，通过协调各个线程，以保证合理的使用资源。
 -   future表示一个可能还没有完成的异步任务的结果，针对这个结果可以添加Callback以便在任务执行成功或失败后作出相应的操作。
 
-![image-20230124002325820](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20230124002325820.png)
+![image-20230124002325820](/img/cos/learn/3481/image-20230124002325820.png)
 
-![image-20230124002545291](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20230124002545291.png)
+![image-20230124002545291](/img/cos/learn/3481/image-20230124002545291.png)
 
-![image-20230129094248057](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20230129094248057.png)
+![image-20230129094248057](/img/cos/learn/3481/image-20230129094248057.png)
 
-![image-20230129094440920](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20230129094440920.png)
+![image-20230129094440920](/img/cos/learn/3481/image-20230129094440920.png)
 
-![image-20230129095038824](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20230129095038824.png)
+![image-20230129095038824](/img/cos/learn/3481/image-20230129095038824.png)
 
 -   初始化阶段：调用init方法
 -   相应客户端请求：调用service
@@ -132,13 +132,13 @@ D—————抽象类可以含有私有成员变量，接口不含有私有�
 2.  在servlet容器启动后，客户首次向servlet发送请求
 3.  servlet类文件被更新后重新装载servlet
 
-![image-20230129095403763](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20230129095403763.png)
+![image-20230129095403763](/img/cos/learn/3481/image-20230129095403763.png)
 
-![image-20230129100852645](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20230129100852645.png)
+![image-20230129100852645](/img/cos/learn/3481/image-20230129100852645.png)
 
-![image-20230129101816282](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20230129101816282.png)
+![image-20230129101816282](/img/cos/learn/3481/image-20230129101816282.png)
 
-![image-20230129101635871](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20230129101635871.png)
+![image-20230129101635871](/img/cos/learn/3481/image-20230129101635871.png)
 
 在Java中，常用的线程通信方式有两种，分别是利用Monitor实现线程通信、利用Condition实现线程通信。线程同步是线程通信的前提，所以究竟采用哪种方式实现通信，取决于线程同步的方式。
 
@@ -148,14 +148,14 @@ JDK 1.5新增了Lock接口及其实现类，提供了更为灵活的同步方式
 
 [以下哪几种方式可用来实现线程间通知和唤醒？_阿里巴巴笔试题_牛客网 (nowcoder.com)](https://www.nowcoder.com/questionTerminal/c6126fd5ba2d40b0bfca35439a6c3563)
 
-![image-20230129103221307](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20230129103221307.png)
+![image-20230129103221307](/img/cos/learn/3481/image-20230129103221307.png)
 
-![image-20230129103733515](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20230129103733515.png)
+![image-20230129103733515](/img/cos/learn/3481/image-20230129103733515.png)
 
-![image-20230129103808822](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20230129103808822.png)
+![image-20230129103808822](/img/cos/learn/3481/image-20230129103808822.png)
 
-![image-20230129104015205](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20230129104015205.png)
+![image-20230129104015205](/img/cos/learn/3481/image-20230129104015205.png)
 
-![image-20230203164358837](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20230203164358837.png)
+![image-20230203164358837](/img/cos/learn/3481/image-20230203164358837.png)
 
-![img](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/643412545_1596634989327_DEF638F8839D3C558612E08DC0A11BFF)
+![img](/img/cos/learn/3481/643412545_1596634989327_DEF638F8839D3C558612E08DC0A11BFF)

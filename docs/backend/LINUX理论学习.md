@@ -1609,12 +1609,12 @@ crond—->周期任务
 (2)个别用户工作：个别用户可能希望执行某些程序，比如对 mysql 数据库的备份。  
 示意图：
 
-![image-20221019110415747](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20221019110415747.png)
+![image-20221019110415747](/img/cos/learn/3481/image-20221019110415747.png)
 
 2.基本语法  
 `crontab [选项]`  
 功能：进行定时任务的设置  
-![image-20221019110439761](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20221019110439761.png)
+![image-20221019110439761](/img/cos/learn/3481/image-20221019110439761.png)
 
 ```shell
 #4.快速入门
@@ -1634,11 +1634,11 @@ crontab -e  #就会进入crontab文件
 
 **特殊符号说明**
 
-![image-20221019110548932](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20221019110548932.png)
+![image-20221019110548932](/img/cos/learn/3481/image-20221019110548932.png)
 
 特定的事件执行任务案例：
 
-![image-20221019110616007](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20221019110616007.png)
+![image-20221019110616007](/img/cos/learn/3481/image-20221019110616007.png)
 
 ```shell
 #5.应用实例
@@ -1699,7 +1699,7 @@ at定时任务调度
 总结：at命令就是对某个定时任务只执行一次
 ```
 
-![image-20221019110826307](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20221019110826307.png)
+![image-20221019110826307](/img/cos/learn/3481/image-20221019110826307.png)
 
 ```shell
 #2. at 命令格式
@@ -1708,7 +1708,7 @@ at定时任务调度
 #3. at 命令选项：
 ```
 
-![image-20221019113608977](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20221019113608977.png)
+![image-20221019113608977](/img/cos/learn/3481/image-20221019113608977.png)
 
 ```shell
 4. at 指定时间的方法：
@@ -1777,7 +1777,7 @@ at定时任务调度
 可以通过指令查看挂载情况，下面会说。
 ```
 
-![image-20221019113855644](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20221019113855644.png)
+![image-20221019113855644](/img/cos/learn/3481/image-20221019113855644.png)
 
 **硬盘说明：**
 
@@ -2082,7 +2082,7 @@ UUID=上面sdb1的UUID   /newdisk    ext4    defaults   0 	   0
 
 ## LINUX网络配置
 
-![image-20221019114700324](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20221019114700324.png)
+![image-20221019114700324](/img/cos/learn/3481/image-20221019114700324.png)
 
 ```shell
 1.通过ifconfig指令查看Linux虚拟机的ip地址
@@ -2230,7 +2230,7 @@ DNS 解析器缓存：
 
 图解
 
-![image-20221019115203027](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20221019115203027.png)
+![image-20221019115203027](/img/cos/learn/3481/image-20221019115203027.png)
 
 第十四章进程管理：
 
@@ -2441,7 +2441,7 @@ Linux 系统有 7 种运行级别(runlevel)：常用的是级别 3 和 5
 
 开机的流程说明：
 
-![image-20221019115702418](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20221019115702418.png)
+![image-20221019115702418](/img/cos/learn/3481/image-20221019115702418.png)
 
 CentOS7 后运行级别说明
 
@@ -2520,7 +2520,7 @@ firewall 指令：打开或者关闭指定端口
 这时，需要打开指定的端口。比如 80、22、8080 等。
 ```
 
-![image-20221019115940049](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20221019115940049.png)
+![image-20221019115940049](/img/cos/learn/3481/image-20221019115940049.png)
 
 ```shell
 (1)	打开端口: firewall-cmd --permanent --add-port=端口号/协议
@@ -2566,7 +2566,7 @@ top 与 ps 最大的不同之处在于: top 在执行一段时间可以更新正
 top [选项]
 ```
 
-![image-20221019120108788](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20221019120108788.png)
+![image-20221019120108788](/img/cos/learn/3481/image-20221019120108788.png)
 
 ```shell
 输入top指令后：每一条都是一个进程
@@ -2604,7 +2604,7 @@ top [选项]
 然后输入以下命令，得以下功能对进程进行排序
 ```
 
-![image-20221019120213845](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20221019120213845.png)
+![image-20221019120213845](/img/cos/learn/3481/image-20221019120213845.png)
 
 ```shell
 案例 1：监视特定用户, 比如监控 tom 用户
@@ -2659,7 +2659,7 @@ tcp        0     36 		192.168.200.130:22      192.168.200.1:14498     ESTABLISHE
 如下图：
 ```
 
-![image-20221019120328489](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20221019120328489.png)
+![image-20221019120328489](/img/cos/learn/3481/image-20221019120328489.png)
 
 ```shell
 案例：查看服务名为 sshd 的服务的信息。
@@ -3455,7 +3455,7 @@ sh testFun.sh
 系统常用日志：
 ```
 
-![image-20221019121939561](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20221019121939561.png)
+![image-20221019121939561](/img/cos/learn/3481/image-20221019121939561.png)
 
 日志管理服务rsyslogd
 
@@ -3471,7 +3471,7 @@ rsyslogd是一个后台程序(服务)，来管理/记录/操作相关日志。
 /etc/rsyslog.conf配置文件中记录了要管理哪些日志和将这些日志记录到哪个文件中。
 ```
 
-![image-20221019145550645](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20221019145550645.png)
+![image-20221019145550645](/img/cos/learn/3481/image-20221019145550645.png)
 
 ```shell
 1.在进行日志管理时，要保证rsyslogd服务是启动的！

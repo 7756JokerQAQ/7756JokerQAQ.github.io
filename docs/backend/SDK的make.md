@@ -5,11 +5,11 @@ title: "开发简易的SDK"
 <!-- truncate -->
 -   首先新建一个springboot项目：
 
-![image-20230114182700903](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20230114182700903.png)
+![image-20230114182700903](/img/cos/learn/3481/image-20230114182700903.png)
 
 -   springboot版本选择2.7.0勾选两个依赖项目
 
-![image-20230114182839313](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20230114182839313.png)
+![image-20230114182839313](/img/cos/learn/3481/image-20230114182839313.png)
 
 接着打开pom文件：
 
@@ -47,7 +47,7 @@ title: "开发简易的SDK"
 
 接着删除启动类：在重新新建一个文件名称为LycApiClientConfig:
 
-![image-20230114183627522](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20230114183627522.png)
+![image-20230114183627522](/img/cos/learn/3481/image-20230114183627522.png)
 
 对新建的LycApiClientConfig类加上注解：
 
@@ -181,7 +181,7 @@ org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.lyc.lycapicli
 
 当上面都完成时需要点击Maven点击闪电图标排除测试类，否则会报错:
 
-![image-20230114184415287](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20230114184415287.png)
+![image-20230114184415287](/img/cos/learn/3481/image-20230114184415287.png)
 
 然后再点击Install就可以进行安装到本地仓库：
 
@@ -283,8 +283,8 @@ class LycapiInterfaceApplicationTests {
 
 文件目录结构:
 
-![image-20230114185211972](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20230114185211972.png)
+![image-20230114185211972](/img/cos/learn/3481/image-20230114185211972.png)
 
 运行结果:
 
-![image-20230114185246930](https://joker-qaq1-1314468534.cos.ap-beijing.myqcloud.com/learn/3481/image-20230114185246930.png)
+![image-20230114185246930](/img/cos/learn/3481/image-20230114185246930.png)
