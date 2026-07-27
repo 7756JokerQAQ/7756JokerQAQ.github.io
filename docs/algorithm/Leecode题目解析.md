@@ -1,9 +1,14 @@
 ---
-title: "Leecode题目解析"
+title: "LeetCode 题目解析"
+description: "LeetCode 经典题目解析，涵盖栈操作构建数组、神奇字符串、Z 字形变换、回文子串、整数反转、前缀和与单调队列等题型。"
+sidebar_position: 7
 ---
 
+**LeetCode** 是技术面试备考的核心平台。本篇精选若干经典题目，涵盖数组模拟、字符串变换、回文计数、整数反转、前缀和与单调队列等常见题型，每题给出思路分析与 Java 实现。
+
 <!-- truncate -->
-#### [1441\. 用栈操作构建数组](https://leetcode.cn/problems/build-an-array-with-stack-operations/)
+
+## [1441. 用栈操作构建数组](https://leetcode.cn/problems/build-an-array-with-stack-operations/)
 
 ```java
 //看到该题我们想到的是可以利用一次循环对list链表进行不断的补充push和pop操作
@@ -44,7 +49,7 @@ class Solution {
 }
 ```
 
-#### [481\. 神奇字符串](https://leetcode.cn/problems/magical-string/)
+## [481. 神奇字符串](https://leetcode.cn/problems/magical-string/)
 
 ```java
 //①.根据观测的的规律我们可以大致了解到例如：s = "1221121221221121122……"
@@ -96,7 +101,7 @@ class Solution {
 }
 ```
 
-#### [779\. 第K个语法符号](https://leetcode.cn/problems/k-th-symbol-in-grammar/)
+## [779. 第K个语法符号](https://leetcode.cn/problems/k-th-symbol-in-grammar/)
 
 ```java
 //方法一可以利用递归的思想来解题 根据题意可以知道他是个有规律的数字当n=5时的结果顺序为
@@ -145,7 +150,7 @@ public class Solution {
 }
 ```
 
-#### [6\. Z 字形变换](https://leetcode.cn/problems/zigzag-conversion/)
+## [6. Z 字形变换](https://leetcode.cn/problems/zigzag-conversion/)
 
 ```java
 //题解：根据题目可以知道遵守Z变换 我们可以这样想 首先根据他给的行数 每行我们开辟一个字符串容器来接收遍历得到的字符
@@ -198,7 +203,7 @@ public class Solution {
 }
 ```
 
-#### [686\. 重复叠加字符串匹配](https://leetcode.cn/problems/repeated-string-match/)
+## [686. 重复叠加字符串匹配](https://leetcode.cn/problems/repeated-string-match/)
 
 ```java
 public class Solution2 {
@@ -225,7 +230,7 @@ public class Solution2 {
 }
 ```
 
-#### [915\. 分割数组](https://leetcode.cn/problems/partition-array-into-disjoint-intervals/)
+## [915. 分割数组](https://leetcode.cn/problems/partition-array-into-disjoint-intervals/)
 
 ```java
 //该题的思路时间复杂度为n空间复杂度为1  案例 1 1 1 0 6 12 或者 5 0 3 6 8
@@ -269,13 +274,13 @@ public int partitionDisjoint(int[] nums) {
     }
 ```
 
-#### [647\. 回文子串](https://leetcode.cn/problems/palindromic-substrings/)
+## [647. 回文子串](https://leetcode.cn/problems/palindromic-substrings/)
 
-根据题目描述我们假设一共有四个数据 最坏的情况每个都当成中心 进行遍历 由下表可以知道每个被当成中心的次数为2\*4-1一共七次
+根据题目描述，我们假设一共有四个数据，**最坏的情况是把每个位置都当成中心进行遍历**。由下表可以知道，每个位置被当成中心的次数为 2*4-1，一共七次。
 
-这样我们就可以进行一次循环遍历 并在里面不断进行判断 得出结果.
+这样我们就可以进行一次循环遍历，并在里面不断进行判断，得出结果。
 
-![image-20221024203621990](/img/cos/image-20221024203621990.png)
+![回文子串中心扩展次数示意图](/img/cos/image-20221024203621990.png)
 
 ```java
 class Solution {
@@ -296,7 +301,7 @@ class Solution {
 }
 ```
 
-#### [7\. 整数反转](https://leetcode.cn/problems/reverse-integer/)
+## [7. 整数反转](https://leetcode.cn/problems/reverse-integer/)
 
 ```java
 //题目解析首先我们需要定义两个边界值
@@ -329,7 +334,7 @@ public class Solution {
 }
 ```
 
-#### [479\. 最大回文数乘积](https://leetcode.cn/problems/largest-palindrome-product/)
+## [479. 最大回文数乘积](https://leetcode.cn/problems/largest-palindrome-product/)
 
 ```java
 /*
@@ -363,7 +368,7 @@ class Solution {
 }
 ```
 
-#### [862\. 和至少为 K 的最短子数组](https://leetcode.cn/problems/shortest-subarray-with-sum-at-least-k/)
+## [862. 和至少为 K 的最短子数组](https://leetcode.cn/problems/shortest-subarray-with-sum-at-least-k/)
 
 ```java
 //基本思想如下图可以首先计算出前缀和然后开始从0遍历整个前缀和数组
@@ -395,9 +400,9 @@ public int shortestSubarray(int[] nums, int k) {
     }
 ```
 
-![image-20221026092351232](/img/cos/image-20221026092351232.png)
+![前缀和与单调队列示意图](/img/cos/image-20221026092351232.png)
 
-#### [476\. 数字的补数](https://leetcode.cn/problems/number-complement/)
+## [476. 数字的补数](https://leetcode.cn/problems/number-complement/)
 
 ```java
 class Solution {
