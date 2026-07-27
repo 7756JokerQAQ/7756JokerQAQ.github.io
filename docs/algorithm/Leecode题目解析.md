@@ -275,7 +275,7 @@ public int partitionDisjoint(int[] nums) {
 
 这样我们就可以进行一次循环遍历 并在里面不断进行判断 得出结果.
 
-![image-20221024203621990](/img/cos/learn/3481/image-20221024203621990.png)
+![image-20221024203621990](/img/cos/image-20221024203621990.png)
 
 ```java
 class Solution {
@@ -395,7 +395,7 @@ public int shortestSubarray(int[] nums, int k) {
     }
 ```
 
-![image-20221026092351232](/img/cos/learn/3481/image-20221026092351232.png)
+![image-20221026092351232](/img/cos/image-20221026092351232.png)
 
 #### [476\. 数字的补数](https://leetcode.cn/problems/number-complement/)
 

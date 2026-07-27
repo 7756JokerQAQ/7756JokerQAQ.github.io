@@ -24,9 +24,9 @@ Spring 是非常流行和成功的 Java 应用开发框架，Spring Security 正
 
 ## 2.新建项目
 
-![image-20230328202136028](/img/cos/learn/202303282021097.png)
+![image-20230328202136028](/img/cos/202303282021097.png)
 
-![image-20230328203541974](/img/cos/learn/202303282035009.png)
+![image-20230328203541974](/img/cos/202303282035009.png)
 
 编写测试类:
 
@@ -43,17 +43,17 @@ public class TestController {
 
 修改端口号:避免冲突
 
-![image-20230328203850705](/img/cos/learn/202303282038731.png)
+![image-20230328203850705](/img/cos/202303282038731.png)
 
 访问地址信息出现登录说明起作用了:
 
-![image-20230328204109673](/img/cos/learn/202303282041730.png)
+![image-20230328204109673](/img/cos/202303282041730.png)
 
 账户为:user 🔑为
 
-![image-20230328204304514](/img/cos/learn/202303282043567.png)
+![image-20230328204304514](/img/cos/202303282043567.png)
 
-![image-20230328205351783](/img/cos/learn/202303282053815.png)
+![image-20230328205351783](/img/cos/202303282053815.png)
 
 表示请求成功但是我们没有这个控制器，但是可以访问了
 
@@ -65,7 +65,7 @@ SpringSecurity本质是一个过滤器链：也就是有很多的过滤器
 
 是一个方法级的权限过滤器, 基本位于过滤链的最底部。
 
-![image-20230328210110108](/img/cos/learn/202303282101181.png)
+![image-20230328210110108](/img/cos/202303282101181.png)
 
 `super.beforeInvocation(filterInvocation)`表示查看之前的`filter`是否通过。
 
@@ -103,29 +103,29 @@ private void doFilter(HttpServletRequest request, HttpServletResponse response, 
 
 -   `UsernamePasswordAuthenticationFilter`：对/login 的 POST 请求做拦截，校验表单中用户名，密码。
 
-![image-20230328211124782](/img/cos/learn/202303282111861.png)
+![image-20230328211124782](/img/cos/202303282111861.png)
 
 ### 3.2 过滤器是如何进行加载的？
 
-![](/img/cos/learn/202303282122630.png)
+![](/img/cos/202303282122630.png)
 
 首先配置过滤器，接着执行doFilter方法初始化**Delegate**，这个是WebApplicationContext 中根据Bean的名字进行匹配得到的过滤器，然后执行将相关的过滤操作送入过滤链中进行执行.
 
 **我们来详细的看看过滤器的信息:**
 
-![image-20230329125524836](/img/cos/learn/202303291255985.png)
+![image-20230329125524836](/img/cos/202303291255985.png)
 
 主要的过滤器有三个也就是上面讲解的三个，其余的可以看着继承接口进行修改。
 
 ### 3.3 UserDetailsService接口讲解
 
-![img](/img/cos/learn/202303282125517.png)
+![img](/img/cos/202303282125517.png)
 
 当什么也没有配置的时候，账号和密码是由`Spring Security`定义生成的。而在实际项目中账号和密码都是从数据库中查询出来的。 所以我们要通过自定义逻辑控制认证逻辑。
 
 如果需要自定义逻辑时，只需要实现 UserDetailsService 接口即可.
 
-![img](/img/cos/learn/202303282126710.png)
+![img](/img/cos/202303282126710.png)
 
 **返回值 UserDetails** 这个类是系统默认的用户“**主体**”
 
@@ -154,7 +154,7 @@ boolean isEnabled();
 
 以下是 `UserDetails`实现类:
 
-![image-20230328213011831](/img/cos/learn/202303282130881.png)
+![image-20230328213011831](/img/cos/202303282130881.png)
 
 -   方法参数`username`
 
@@ -177,7 +177,7 @@ return false;
 
 接口实现类
 
-![img](/img/cos/learn/202303282131951.png)
+![img](/img/cos/202303282131951.png)
 
 `BCryptPasswordEncoder` 是 `Spring Security` 官方推荐的密码解析器，平时多使用这个解析器。
 
@@ -205,25 +205,25 @@ public void test01(){
 
 ### 4.1 设置登录系统的账号密码;
 
-![image-20230328213937178](/img/cos/learn/202303282139212.png)
+![image-20230328213937178](/img/cos/202303282139212.png)
 
 **方式二：**编写类的实现接口
 
 ### 4.2 登录认证校验流程
 
-![img](/img/cos/learn/202304031908170.png)
+![img](/img/cos/202304031908170.png)
 
 这里的使用 **用户名/用户id生成的jwt**为了保证安全行，不利用id进行生成而是利用 前缀+随机时间生成的token
 
 #### 4.2.1 springSecurity的完整流程图
 
-![img](/img/cos/learn/202304031912605.png)
+![img](/img/cos/202304031912605.png)
 
 如后的实现流程均基于当前的过滤链进行实现。
 
 #### 4.2.2 认证流程图详解
 
-![img](/img/cos/learn/202304031914071.png)
+![img](/img/cos/202304031914071.png)
 
 -   Authentication接口: 它的实现类，表示当前访问系统的用户，封装了用户相关信息。
 -   AuthenticationManager接口：定义了认证Authentication的方法
@@ -401,35 +401,35 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
 
 接着我们需要打开过滤的开关，需要在SecurityConfig进行配置
 
-![image-20230403201429104](/img/cos/learn/202304032014181.png)
+![image-20230403201429104](/img/cos/202304032014181.png)
 
 开始进行测试启动项目:
 
 因为数据库存的信息为 userName:张三 password:1234 所以首先我们进行登录打开postman
 
-![image-20230403201654389](/img/cos/learn/202304032016454.png)
+![image-20230403201654389](/img/cos/202304032016454.png)
 
 接着我们可以看到postman给出的详细的信息:
 
-![image-20230403201829552](/img/cos/learn/202304032018604.png)
+![image-20230403201829552](/img/cos/202304032018604.png)
 
 我们去查询一下后台的日志信息:
 
-![image-20230403201913367](/img/cos/learn/202304032019408.png)
+![image-20230403201913367](/img/cos/202304032019408.png)
 
 说明这个在登录之前走了过滤器😄 但是当前我们还没有输入token，token时刚刚生成的
 
 接着我们进行token的验证登录:因为我们拿到了token这就好办了测试另一个接口这次直接调用hello接口 预测能返回hello security
 
-![image-20230403202443016](/img/cos/learn/202304032024082.png)
+![image-20230403202443016](/img/cos/202304032024082.png)
 
 返回结果:
 
-![image-20230403202525967](/img/cos/learn/202304032025012.png)
+![image-20230403202525967](/img/cos/202304032025012.png)
 
 我们在看看后台的控制台打印的信息
 
-![image-20230403202615261](/img/cos/learn/202304032026302.png)
+![image-20230403202615261](/img/cos/202304032026302.png)
 
 说明调用过滤器成功可以通过token进行请求接口:
 
@@ -461,19 +461,19 @@ LoginController添加
 
 进行测试:
 
-![image-20230403203451446](/img/cos/learn/202304032034514.png)
+![image-20230403203451446](/img/cos/202304032034514.png)
 
 结果如图：
 
-![image-20230403203516274](/img/cos/learn/202304032035310.png)
+![image-20230403203516274](/img/cos/202304032035310.png)
 
 然后我们在拿着token去访问hello接口看看效果:
 
-![image-20230403203652084](/img/cos/learn/202304032036154.png)
+![image-20230403203652084](/img/cos/202304032036154.png)
 
 接着看看控制台的信息:
 
-![image-20230403203715344](/img/cos/learn/202304032037385.png)
+![image-20230403203715344](/img/cos/202304032037385.png)
 
 注销完成!！
 
@@ -517,7 +517,7 @@ public class HelloController {
 
 **首先是数据库表的设计RBAC权限模型:**
 
-![img](/img/cos/learn/202304042153345.png)
+![img](/img/cos/202304042153345.png)
 
 需要五张表下面是相关的建表语句:
 
@@ -627,17 +627,17 @@ WHERE
 	AND m.`status` = 0
 ```
 
-![image-20230404215557142](/img/cos/learn/202304042155189.png)
+![image-20230404215557142](/img/cos/202304042155189.png)
 
 这里面的数据是我提前存入的你也可以手动的添加😏
 
-![image-20230404215825331](/img/cos/learn/202304042158383.png)
+![image-20230404215825331](/img/cos/202304042158383.png)
 
-![image-20230404215848438](/img/cos/learn/202304042158489.png)
+![image-20230404215848438](/img/cos/202304042158489.png)
 
-![image-20230404215909965](/img/cos/learn/202304042159019.png)
+![image-20230404215909965](/img/cos/202304042159019.png)
 
-![image-20230404215946261](/img/cos/learn/202304042159314.png)
+![image-20230404215946261](/img/cos/202304042159314.png)
 
 密码的生成看测试类中的代码:
 
@@ -656,7 +656,7 @@ WHERE
  }
 ```
 
-![image-20230404220041457](/img/cos/learn/202304042200506.png)
+![image-20230404220041457](/img/cos/202304042200506.png)
 
 **接着需要导入一个菜单表的实体类:见仓库Menu.class**
 
@@ -664,9 +664,9 @@ WHERE
 
 在UserDetailsServiceImpl中有一个继承实现权限的函数需要进行修改定义,在代码里也就是那个LoginUser类中的`getAuthorities()`
 
-![image-20230404214859491](/img/cos/learn/202304042149592.png)
+![image-20230404214859491](/img/cos/202304042149592.png)
 
-![image-20230404214917513](/img/cos/learn/202304042149574.png)
+![image-20230404214917513](/img/cos/202304042149574.png)
 
 ```java
 //存储权限信息
@@ -695,7 +695,7 @@ WHERE
 
 当我们修改**完成LoginUser后**就可以去UserDetailsServiceImpl中去把权限信息封装到LoginUser中了，代码实现:
 
-![image-20230404220519246](/img/cos/learn/202304042205314.png)
+![image-20230404220519246](/img/cos/202304042205314.png)
 
 直接调用进行查询即可；结果我就不粘贴了😏
 
@@ -862,4 +862,4 @@ public String hello(){
 
 **基于配置的方法：**
 
-![image-20230405105836965](/img/cos/learn/202304051058121.png)
+![image-20230405105836965](/img/cos/202304051058121.png)

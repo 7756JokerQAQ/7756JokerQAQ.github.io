@@ -14,17 +14,17 @@ title: "Zookeeper"
     -   分布式锁
     -   集群管理
 
-![image-20230101193326282](/img/cos/learn/3481/image-20230101193326282.png)
+![image-20230101193326282](/img/cos/image-20230101193326282.png)
 
 他类似一个配置中心来管理各个客户端保证数据的统一性：即访问不同的服务器得到相同的数据。
 
-![image-20230101193352872](/img/cos/learn/3481/image-20230101193352872.png)
+![image-20230101193352872](/img/cos/image-20230101193352872.png)
 
 # 二、zookeeper 数据模型
 
 zookeeper是一个属性目录服务、其数据模型和Unix的文件系统相类似，拥有一个层次化的结构。它类似于一个树形的结果如图：
 
-![image-20230101193833720](/img/cos/learn/3481/image-20230101193833720.png)
+![image-20230101193833720](/img/cos/image-20230101193833720.png)
 
 这里的每一个节点都被称为ZNode每个节点都会保存自己的数据和节点的信息。
 
@@ -44,7 +44,7 @@ zookeeper是一个属性目录服务、其数据模型和Unix的文件系统相�
 -   停止服务zkServer.sh stop
 -   重启服务zkServer.sh restart
 
-![image-20230101194716844](/img/cos/learn/3481/image-20230101194716844.png)
+![image-20230101194716844](/img/cos/image-20230101194716844.png)
 
 -   链接服务器端 zkCli.sh -server ip:port
     

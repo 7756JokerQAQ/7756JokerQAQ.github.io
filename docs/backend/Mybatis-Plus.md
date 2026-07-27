@@ -44,7 +44,7 @@ title: "Mybatis-Plus"
 
 ### 4.框架结构
 
-![framework](/img/cos/learn/3481/mybatis-plus-framework.jpg)
+![framework](/img/cos/mybatis-plus-framework.jpg)
 
 ### 5.代码以及官方文档
 
@@ -78,13 +78,13 @@ MyBatis-Plus：3.5.1
 
 使用 Spring Initializr 快速初始化一个 Spring Boot 工程
 
-![image-20221022142442601](/img/cos/learn/3481/image-20221022142442601.png)
+![image-20221022142442601](/img/cos/image-20221022142442601.png)
 
-![image-20221022142527037](/img/cos/learn/3481/image-20221022142527037.png)
+![image-20221022142527037](/img/cos/image-20221022142527037.png)
 
 删除不需要的文件：
 
-![image-20221022142631689](/img/cos/learn/3481/image-20221022142631689.png)
+![image-20221022142631689](/img/cos/image-20221022142631689.png)
 
 ### 3.a>创建数据库表
 
@@ -218,7 +218,7 @@ public class User {
 
 首先在java对应的目录下建立一个mapper文件夹用来存放各种mapper项目结构图如下
 
-![image-20221022144551484](/img/cos/learn/3481/image-20221022144551484.png)
+![image-20221022144551484](/img/cos/image-20221022144551484.png)
 
 添加一个UserMapper接口让他继承BaseMapper可以拥有一些基础的CRUD功能
 
@@ -539,7 +539,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper,User> implements Use
 }
 ```
 
-![image-20221022150748320](/img/cos/learn/3481/image-20221022150748320.png)
+![image-20221022150748320](/img/cos/image-20221022150748320.png)
 
 #### **c>** **测试查询记录数**
 
@@ -584,7 +584,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper,User> implements Use
 
 > 在实体类类型上添加@TableName(“t\_user”)，标识实体类对应的表，即可成功执行SQL语句 //括号内是要加入的指定数据库表名
 
-![image-20221022151456161](/img/cos/learn/3481/image-20221022151456161.png)
+![image-20221022151456161](/img/cos/image-20221022151456161.png)
 
 #### c>通过全局配置解决问题
 
@@ -623,7 +623,7 @@ public class User {
 
 > 若实体类中主键对应的属性为id，而表中表示主键的字段为uid，此时若只在属性id上添加注解@TableId，则抛出异常Unknown column ‘id’ in ‘field list’，即MyBatis-Plus仍然会将id作为表的主键操作，而表中表示主键的是字段uid此时需要通过@TableId注解的value属性，指定表中的主键字段，@TableId(“uid”)或@TableId(value=”uid”)
 
-![image-20221022152333945](/img/cos/learn/3481/image-20221022152333945.png)
+![image-20221022152333945](/img/cos/image-20221022152333945.png)
 
 **配置全局主键策略：**
 
@@ -711,7 +711,7 @@ private Integer deleted;
 
 ### **1** **、** **wapper** **介绍**
 
-![image-20221022153506737](/img/cos/learn/3481/image-20221022153506737.png)
+![image-20221022153506737](/img/cos/image-20221022153506737.png)
 
 -   Wrapper ： 条件构造抽象类，最顶端父类
     -   AbstractWrapper ： 用于查询条件封装，生成 sql 的 where 条件
